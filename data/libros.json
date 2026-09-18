@@ -1,0 +1,29 @@
+[
+  {
+    "slug": "ia-aplicada-01-receta",
+    "title": "El método receta",
+    "collection": "IA aplicada",
+    "volume": 1,
+    "available": false,
+    "url_pagopar": "",
+    "note": "URL de pago pendiente de alta en PagoPar"
+  },
+  {
+    "slug": "guias-01-revision-sistematica",
+    "title": "Guía de revisión sistemática",
+    "collection": "Guías académicas",
+    "volume": 1,
+    "available": false,
+    "url_pagopar": "",
+    "note": "URL de pago pendiente de alta en PagoPar"
+  },
+  {
+    "slug": "fundamentos-01-metodologia",
+    "title": "Fundamentos de metodología de la investigación",
+    "collection": "Fundamentos",
+    "volume": 1,
+    "available": false,
+    "url_pagopar": "",
+    "note": "URL de pago pendiente de alta en PagoPar"
+  }
+]

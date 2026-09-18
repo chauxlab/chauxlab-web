@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Libros — ChauxLab Institute</title>
+    <meta
+      name="description"
+      content="Catálogo editorial de ChauxLab Institute. Compra digital a través de PagoPar."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,500;7..72,600;7..72,700&family=Source+Sans+3:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/assets/css/site.css" />
+    <link rel="icon" href="/assets/img/chauxlab-logo.png" type="image/png" />
+  </head>
+  <body>
+    <a class="skip" href="#contenido">Saltar al contenido</a>
+
+    <header class="site-header site-header--solid">
+      <div class="site-header__inner">
+        <a class="brand" href="/">
+          <img class="brand__mark" src="/assets/img/chauxlab-logo.png" alt="" width="40" height="40" />
+          <span class="brand__name">ChauxLab Institute</span>
+        </a>
+        <nav class="nav" aria-label="Principal">
+          <a href="/ojs/">OJS</a>
+          <a href="/libros/" aria-current="page">Libros</a>
+          <a href="/publicaciones/">Publicaciones</a>
+          <a href="/investigacion/">Investigación</a>
+          <a href="/contacto/">Contacto</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="contenido">
+      <header class="page-hero">
+        <div class="page-hero__inner">
+          <h1>Catálogo editorial</h1>
+          <p>
+            Selección de títulos digitales. Al comprar, se abre la página de pago de PagoPar
+            correspondiente a cada obra.
+          </p>
+        </div>
+      </header>
+
+      <section class="section">
+        <div class="section__inner">
+          <ul class="book-list" id="catalogo" aria-live="polite">
+            <li class="muted">Cargando catálogo…</li>
+          </ul>
+          <p class="note">
+            El catálogo maestro de URLs de pago vive en
+            <code>data/libros.json</code>. Se alimentará desde el repositorio de libros y, en
+            una fase posterior, desde la API de PagoPar.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <p><strong>ChauxLab Institute E.A.S.</strong> · Asunción, Paraguay</p>
+        <p><a href="mailto:editorial@chauxlab.com">editorial@chauxlab.com</a></p>
+      </div>
+    </footer>
+
+    <script>
+      async function loadCatalog() {
+        const root = document.getElementById("catalogo");
+        try {
+          const res = await fetch("/data/libros.json", { cache: "no-cache" });
+          if (!res.ok) throw new Error("No se pudo cargar el catálogo");
+          const books = await res.json();
+          if (!Array.isArray(books) || books.length === 0) {
+            root.innerHTML = "<li class=\"muted\">Todavía no hay títulos publicados en el catálogo web.</li>";
+            return;
+          }
+          root.innerHTML = books
+            .map((book) => {
+              const buy =
+                book.available && book.url_pagopar
+                  ? `<a class="btn btn--outline" href="${book.url_pagopar}" rel="noopener noreferrer" target="_blank">Comprar</a>`
+                  : `<span class="muted">Próximamente</span>`;
+              const note = book.note ? `<p class="book__note">${book.note}</p>` : "";
+              return `<li class="book">
+                <div class="book__meta">
+                  <span class="book__collection">${book.collection || "Editorial"}</span>
+                  <h2 class="book__title">${book.title}</h2>
+                  ${note}
+                </div>
+                <div>${buy}</div>
+              </li>`;
+            })
+            .join("");
+        } catch (err) {
+          root.innerHTML = `<li class="muted">No se pudo cargar el catálogo. (${err.message})</li>`;
+        }
+      }
+      loadCatalog();
+    </script>
+  </body>
+</html>
