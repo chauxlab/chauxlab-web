@@ -20,7 +20,7 @@ No incluye carrito ni Shopify. La integración profunda con la API de PagoPar es
 
 - HTML / CSS / JS mínimo (sin build).
 - Publicación: **GitHub Pages** (`.github/workflows/pages.yml`) — cada push a `main` despliega.
-- Dominio custom (pendiente DNS): `CNAME` → `chauxlab.com` (DreamHost → GitHub Pages).
+- Dominio custom `chauxlab.com`: DNS apex en DreamHost (registros A de GitHub Pages). Se reactivará el custom domain en Pages cuando el DNS haya propagado (sin archivo `CNAME` en el repo hasta entonces, para que `*.github.io` no redirija al dominio viejo).
 
 ## Desarrollo local
 
