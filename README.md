@@ -4,7 +4,10 @@ Sitio estático de **ChauxLab Institute** (`chauxlab.com`).
 
 **Repositorio:** [`chauxlab/chauxlab-web`](https://github.com/chauxlab/chauxlab-web) (público, org ChauxLab).
 
-**Sitio publicado:** https://chauxlab.github.io/chauxlab-web/
+**Sitio en vivo:** https://chauxlab.com/  
+**Mirror Pages:** https://chauxlab.github.io/chauxlab-web/
+
+Handoff para la siguiente sesión (diseño): [`docs/HANDOFF.md`](docs/HANDOFF.md).
 
 ## Objetivo
 
@@ -20,7 +23,7 @@ No incluye carrito ni Shopify. La integración profunda con la API de PagoPar es
 
 - HTML / CSS / JS mínimo (sin build).
 - Publicación: **GitHub Pages** (`.github/workflows/pages.yml`) — cada push a `main` despliega.
-- Dominio custom `chauxlab.com`: DNS apex en DreamHost (registros A de GitHub Pages). Se reactivará el custom domain en Pages cuando el DNS haya propagado (sin archivo `CNAME` en el repo hasta entonces, para que `*.github.io` no redirija al dominio viejo).
+- Dominio custom: archivo `CNAME` = `chauxlab.com`. DNS en DreamHost (apex A → IPs de GitHub Pages; `www` CNAME → `chauxlab.github.io`). HTTPS forzado en Pages.
 
 ## Desarrollo local
 
@@ -36,8 +39,6 @@ Abrir `http://localhost:8080`.
 
 Fuente web: [`data/libros.json`](data/libros.json).
 
-Campos:
-
 | Campo | Uso |
 |-------|-----|
 | `slug` | Id estable |
@@ -49,15 +50,11 @@ Campos:
 
 El contenido editorial vive en `chauxlab-books`; este JSON es el puente hacia la web y PagoPar.
 
-## DNS (DreamHost → GitHub Pages)
+## DNS (resumen)
 
-Tras crear el repo en GitHub y activar Pages:
-
-1. En el repo: **Settings → Pages** → source = GitHub Actions.
-2. En DreamHost, para `chauxlab.com`:
-   - registro **A** a las IPs de GitHub Pages, o
-   - **CNAME** de `www` a `<user>.github.io` según la [documentación actual de GitHub](https://docs.github.com/pages/configuring-a-custom-domain-for-your-github-pages-site).
-3. Esperar propagación y verificar el dominio en Settings → Pages.
+1. Pages source = GitHub Actions; custom domain = `chauxlab.com`; Enforce HTTPS.
+2. DreamHost (DNS Only): apex **A** a las IPs de GitHub Pages; **CNAME** `www` → `chauxlab.github.io`.
+3. Detalle y aprendizajes: [`docs/HANDOFF.md`](docs/HANDOFF.md).
 
 ## Contacto
 
