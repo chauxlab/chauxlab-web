@@ -2,7 +2,9 @@
 
 Sitio estático de **ChauxLab Institute** (`chauxlab.com`).
 
-**Repositorio:** [`chauxlab/chauxlab-web`](https://github.com/chauxlab/chauxlab-web) (privado, org ChauxLab).
+**Repositorio:** [`chauxlab/chauxlab-web`](https://github.com/chauxlab/chauxlab-web) (público, org ChauxLab).
+
+**Sitio publicado:** https://chauxlab.github.io/chauxlab-web/
 
 ## Objetivo
 
@@ -17,22 +19,8 @@ No incluye carrito ni Shopify. La integración profunda con la API de PagoPar es
 ## Stack
 
 - HTML / CSS / JS mínimo (sin build).
-- Dominio: `CNAME` → `chauxlab.com` (DNS en DreamHost).
-
-### Publicación (importante)
-
-El repo es **privado** y la org [`chauxlab`](https://github.com/chauxlab) está en plan **Free**. En ese plan, GitHub Pages **no publica** sitios desde repositorios privados (hace falta GitHub Team, o bien dejar el repo público).
-
-Opciones viables:
-
-| Opción | Notas |
-|--------|--------|
-| **GitHub Team** + Pages | Push → live; mantiene el repo privado |
-| **Cloudflare Pages** (gratis) | Conecta el repo privado; DNS `chauxlab.com` |
-| **DreamHost** (estático) | Deploy por rsync/SFTP desde CI |
-| Repo **público** + Pages | Funciona en Free; el código del sitio queda visible |
-
-Workflow de Pages: `.github/workflows/pages.yml` (listo si se habilita Team o se hace público).
+- Publicación: **GitHub Pages** (`.github/workflows/pages.yml`) — cada push a `main` despliega.
+- Dominio custom (pendiente DNS): `CNAME` → `chauxlab.com` (DreamHost → GitHub Pages).
 
 ## Desarrollo local
 
