@@ -64,17 +64,59 @@
               <a href="https://chauxlab.com">chauxlab.com</a>
             </li>
           </ul>
-          <p>
-            <a
-              class="btn btn--primary"
-              href="mailto:editorial@chauxlab.com?subject=Consulta%20ChauxLab%20%E2%80%94%20cotizaci%C3%B3n%20OJS"
-              >Escribir por correo</a
-            >
+        </div>
+      </section>
+
+      <section class="section section--alt">
+        <div class="section__inner">
+          <p class="eyebrow">Solicitar cotización</p>
+          <h2 class="section__title">Detalles del proyecto</h2>
+          <p class="section__lede">
+            Al enviar este formulario se abre un correo prellenado hacia
+            editorial@chauxlab.com. Indicar el servicio de interés acelera la cotización.
           </p>
-          <p class="note">
-            Indique si su institución es nacional o internacional y si consulta por Nube OJS
-            (M1), Gestión editorial (M2) o Integral (M3). Eso acelera la cotización.
-          </p>
+          <form class="form" id="contact-form">
+            <div class="form-row">
+              <label for="cf-nombre">Nombre y apellido</label>
+              <input id="cf-nombre" name="nombre" type="text" required />
+            </div>
+            <div class="form-row">
+              <label for="cf-contacto">Correo o WhatsApp</label>
+              <input id="cf-contacto" name="contacto" type="text" required />
+            </div>
+            <div class="form-row">
+              <label for="cf-institucion">Institución</label>
+              <input id="cf-institucion" name="institucion" type="text" />
+            </div>
+            <div class="form-row">
+              <label for="cf-servicio">Servicio de interés</label>
+              <select id="cf-servicio" name="servicio">
+                <option value="Nube OJS (M1)">Nube OJS (M1)</option>
+                <option value="Gestión editorial OJS (M2)">Gestión editorial OJS (M2)</option>
+                <option value="Nube OJS Integral (M3)">Nube OJS Integral (M3)</option>
+                <option value="Catálogo editorial">Catálogo editorial</option>
+                <option value="Investigación institucional">Investigación institucional</option>
+                <option value="Otro">Otro</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <label for="cf-institucion-tipo">Institución nacional o internacional</label>
+              <select id="cf-institucion-tipo" name="tipo_institucion">
+                <option value="Nacional (Paraguay)">Nacional (Paraguay)</option>
+                <option value="Internacional">Internacional</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <label for="cf-mensaje">Mensaje</label>
+              <textarea id="cf-mensaje" name="mensaje" placeholder="Breve descripción del proyecto o consulta"></textarea>
+            </div>
+            <button class="btn btn--primary form__submit" type="submit">Abrir correo con esta consulta</button>
+            <p class="form__status">
+              Se abrirá el programa de correo predeterminado. También es posible escribir
+              directamente a
+              <a href="mailto:editorial@chauxlab.com">editorial@chauxlab.com</a>.
+            </p>
+          </form>
         </div>
       </section>
     </main>
@@ -85,5 +127,47 @@
         <p><a href="mailto:editorial@chauxlab.com">editorial@chauxlab.com</a></p>
       </div>
     </footer>
+
+    <script>
+      const servicioPorParametro = {
+        m1: "Nube OJS (M1)",
+        m2: "Gestión editorial OJS (M2)",
+        m3: "Nube OJS Integral (M3)",
+      };
+      const parametroServicio = new URLSearchParams(location.search).get("servicio");
+      if (parametroServicio && servicioPorParametro[parametroServicio]) {
+        const selectServicio = document.getElementById("cf-servicio");
+        selectServicio.value = servicioPorParametro[parametroServicio];
+      }
+
+      document.getElementById("contact-form").addEventListener("submit", function (event) {
+        event.preventDefault();
+        const data = new FormData(event.target);
+        const nombre = data.get("nombre") || "";
+        const contacto = data.get("contacto") || "";
+        const institucion = data.get("institucion") || "";
+        const servicio = data.get("servicio") || "";
+        const tipoInstitucion = data.get("tipo_institucion") || "";
+        const mensaje = data.get("mensaje") || "";
+
+        const subject = `Consulta ChauxLab — ${servicio}`;
+        const body = [
+          `Nombre: ${nombre}`,
+          `Correo o WhatsApp: ${contacto}`,
+          `Institución: ${institucion}`,
+          `Tipo de institución: ${tipoInstitucion}`,
+          `Servicio de interés: ${servicio}`,
+          "",
+          "Mensaje:",
+          mensaje,
+        ].join("\n");
+
+        window.location.href =
+          "mailto:editorial@chauxlab.com?subject=" +
+          encodeURIComponent(subject) +
+          "&body=" +
+          encodeURIComponent(body);
+      });
+    </script>
   </body>
 </html>

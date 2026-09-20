@@ -490,6 +490,198 @@ a:hover {
   margin-top: 0.35rem;
 }
 
+/* —— Plan router —— */
+.route-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14.5rem, 1fr));
+  gap: 1.25rem;
+  margin: 2.25rem 0 0;
+}
+
+.route-card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.75rem;
+  background: var(--white);
+  border: 1px solid rgba(15, 39, 68, 0.08);
+  border-radius: 0.85rem;
+  box-shadow: 0 1px 2px rgba(15, 39, 68, 0.04);
+}
+
+.route-card__icon {
+  display: grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-bottom: 1.1rem;
+  border-radius: 0.6rem;
+  background: var(--mist);
+  color: var(--navy);
+}
+
+.route-card__icon svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.route-card__q {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.02rem;
+  color: var(--navy);
+  margin: 0 0 0.35rem;
+}
+
+.route-card__a {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--slate);
+  flex: 1;
+}
+
+.route-card__result {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 1.25rem;
+  padding-top: 1.1rem;
+  border-top: 1px dashed rgba(15, 39, 68, 0.15);
+  font-size: 0.8rem;
+  color: var(--slate);
+  text-decoration: none;
+}
+
+.route-card__result strong {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.4rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 999px;
+  background: var(--gold);
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+}
+
+/* —— Plan comparison table —— */
+.plan-table-wrap {
+  margin-top: 2.25rem;
+  overflow-x: auto;
+  border-radius: 0.85rem;
+  border: 1px solid rgba(15, 39, 68, 0.1);
+  background: var(--white);
+}
+
+.plan-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 40rem;
+}
+
+.plan-table th,
+.plan-table td {
+  padding: 0.95rem 1.1rem;
+  text-align: left;
+  font-size: 0.92rem;
+  border-bottom: 1px solid rgba(15, 39, 68, 0.08);
+}
+
+.plan-table tbody tr:last-child th,
+.plan-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.plan-table tbody tr:nth-child(even) {
+  background: rgba(232, 238, 244, 0.4);
+}
+
+.plan-table thead th {
+  vertical-align: top;
+  background: var(--navy);
+  color: var(--white);
+  border-bottom: none;
+}
+
+.plan-table thead th:first-child {
+  background: var(--navy);
+}
+
+.plan-table__code {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold-soft);
+  margin-bottom: 0.3rem;
+}
+
+.plan-table__name {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.plan-table__price {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.15rem;
+}
+
+.plan-table__price small {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.plan-table__price-note {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.55);
+  margin-bottom: 0.35rem;
+}
+
+.plan-table__cta {
+  display: inline-block;
+  margin-top: 0.75rem;
+  padding: 0.4rem 0.85rem;
+  border-radius: 0.3rem;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: var(--white);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.plan-table__cta:hover {
+  border-color: var(--gold-soft);
+  color: var(--gold-soft);
+}
+
+.plan-table tbody th {
+  font-weight: 600;
+  color: var(--navy-mid);
+  white-space: nowrap;
+}
+
+
+.plan-table .is-yes svg {
+  width: 1.1rem;
+  height: 1.1rem;
+  color: var(--navy);
+}
+
+.plan-table .is-no {
+  color: rgba(92, 111, 132, 0.5);
+}
+
 /* —— Method steps —— */
 .steps {
   display: grid;
@@ -566,6 +758,100 @@ a:hover {
   background: var(--white);
 }
 
+/* —— Icon benefit grid —— */
+.icon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.icon-card {
+  display: flex;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: var(--white);
+  border: 1px solid rgba(15, 39, 68, 0.08);
+  border-radius: 0.75rem;
+}
+
+.icon-card__icon {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 999px;
+  background: var(--mist);
+  color: var(--navy);
+}
+
+.icon-card__icon svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.icon-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.02rem;
+  font-weight: 600;
+  margin: 0 0 0.35rem;
+  color: var(--navy);
+}
+
+.icon-card p {
+  margin: 0;
+  font-size: 0.92rem;
+  color: var(--slate);
+}
+
+/* —— FAQ accordion —— */
+.faq {
+  margin-top: 2rem;
+  border-top: 1px solid rgba(15, 39, 68, 0.12);
+}
+
+.faq-item {
+  border-bottom: 1px solid rgba(15, 39, 68, 0.12);
+}
+
+.faq-item summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.15rem 0;
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--navy);
+  cursor: pointer;
+  list-style: none;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: "+";
+  flex: none;
+  font-family: var(--font-body);
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: var(--gold);
+  transition: transform 0.2s ease;
+}
+
+.faq-item[open] summary::after {
+  transform: rotate(45deg);
+}
+
+.faq-item p {
+  margin: 0 0 1.25rem;
+  color: var(--slate);
+  max-width: 42rem;
+}
+
 /* —— Book list —— */
 .book-list {
   list-style: none;
@@ -637,6 +923,60 @@ a:hover {
   font-size: 0.95rem;
   color: var(--slate);
   max-width: 40rem;
+}
+
+/* —— Form —— */
+.form {
+  display: grid;
+  gap: 1.25rem;
+  max-width: 34rem;
+}
+
+.form-row {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.form-row label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--navy-mid);
+}
+
+.form-row input,
+.form-row select,
+.form-row textarea {
+  font: inherit;
+  padding: 0.7rem 0.85rem;
+  border: 1px solid rgba(15, 39, 68, 0.2);
+  border-radius: 0.4rem;
+  background: var(--white);
+  color: var(--ink);
+}
+
+.form-row input:focus,
+.form-row select:focus,
+.form-row textarea:focus {
+  outline: 2px solid var(--gold);
+  outline-offset: 1px;
+  border-color: var(--gold);
+}
+
+.form-row textarea {
+  resize: vertical;
+  min-height: 6.5rem;
+}
+
+.form__submit {
+  justify-self: start;
+}
+
+.form__status {
+  font-size: 0.9rem;
+  color: var(--slate);
+  margin: 0;
 }
 
 /* —— Contact —— */

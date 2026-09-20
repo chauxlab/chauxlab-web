@@ -18,7 +18,7 @@ Cierre de la fase de **infraestructura y publicación**. El sitio estático v1 e
 ## Decisiones de producto (no reabrir sin motivo)
 
 1. **Sitio estático mínimo** — HTML/CSS/JS, sin build, sin carrito.
-2. **OJS (prioridad 1)** — M1/M2/M3 sin precios públicos; CTA = cotización (nacional / internacional).
+2. **OJS (prioridad 1)** — M1/M2/M3 con precio base publicado en guaraníes (2026-09-19, reemplaza decisión anterior de no publicar precios). Servicios diferenciados, no niveles incrementales. Clientes internacionales: misma tabla de precios; la pasarela de pago convierte a moneda local al momento de pagar. Excedentes también publicados (Gs. 60.000/DOI extra en M1; Gs. 120.000/artículo extra en M2 y M3). Naming M1/M2/M3 + denominación comercial actual se mantiene (no Go/Plus/Pro). Pendiente: definir si Libros e Investigación siguen el mismo criterio.
 3. **Libros (prioridad 2)** — catálogo vía `data/libros.json` → enlace PagoPar por título (API PagoPar = fase 2).
 4. **Publicaciones / investigación** — secundarios; investigación solo proyectos de envergadura.
 5. **Hosting v1** — GitHub Pages (Actions). DreamHost = DNS only. Cloudflare diferido (útil si quieren repo privado + Pages sin Team).
@@ -73,6 +73,13 @@ CNAME                     # chauxlab.com
 - Actualizar KB / procedimientos que mencionen Shopify como canal web.
 - Fase 2: API PagoPar (Worker u otro backend); no en este repo estático.
 - `copyright.typ` / tienda URL en repos editoriales cuando el dominio quede estable.
+- **Resuelto (2026-09-19):** ISSN incluido en el precio en M1/M2/M3, sin excepción. Si la institución ya tiene ISSN propio, se mantiene el suyo; no hay cargo aparte ni descuento por no requerir el trámite.
+- **Resuelto (2026-09-19):** descuento de 10% en M2 y M3 por pago anual adelantado (Gs. 54.000.000/año en M2; Gs. 108.000.000/año en M3, IVA incluido). Publicado en `ojs/index.html` y FAQ. M1 no aplica (ya es anual).
+- **Resuelto (2026-09-19):** vigencia contractual se comunica como "12 meses, prorrogable de común acuerdo" en el sitio (antes "sin renovación automática", que daba impresión de corte fijo). No implica cambio en la mecánica real de renovación (sigue sin ser automática).
+- Requisito M2 documentado en FAQ del sitio: la institución debe dar acceso de administrador a su instancia OJS y acceso al servidor (cPanel o equivalente) antes de iniciar la gestión editorial.
+- **Resuelto (2026-09-20):** portabilidad de datos documentada en FAQ de `ojs/index.html`: en las tres modalidades la institución recibe exportación completa, suficiente para reinstalar en otro servidor; es política y consta en contrato.
+- **Resuelto (2026-09-20):** backups periódicos con restitución en caso de falla, incluidos como parte del soporte técnico en las tres modalidades. Documentado en FAQ.
+- **Pendiente — próxima sesión (no diseño, contenido/estrategia):** mencionar Scripta Scientia en `ojs/index.html` (o en el sitio en general) como revista real gestionada por ChauxLab — no una demo — para poder mostrarla como referencia. Motivo estratégico: Scripta Scientia necesita una página web institucional para poder solicitar ingreso al directorio Latindex. **No mencionar** las otras revistas en gestión (Medicina Familiar, UniNorte) sin autorización expresa de esas instituciones.
 
 ## Dev local
 
