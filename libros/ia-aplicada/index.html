@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Libros — ChauxLab Institute</title>
+    <title>Serie IA aplicada — Libros — ChauxLab Institute</title>
     <meta
       name="description"
-      content="Catálogo editorial de ChauxLab Institute: libros digitales organizados por serie."
+      content="Serie IA aplicada: 12 volúmenes de ChauxLab Institute sobre inteligencia artificial aplicada a la investigación científica."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,37 +14,37 @@
       href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,500;7..72,600;7..72,700&family=Source+Sans+3:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../assets/css/site.css" />
-    <link rel="icon" href="../assets/img/chauxlab-logo.png" type="image/png" />
+    <link rel="stylesheet" href="../../assets/css/site.css" />
+    <link rel="icon" href="../../assets/img/chauxlab-logo.png" type="image/png" />
   </head>
   <body>
     <a class="skip" href="#contenido">Saltar al contenido</a>
 
     <header class="site-header site-header--solid">
       <div class="site-header__inner">
-        <a class="brand" href="../">
-          <img class="brand__mark" src="../assets/img/chauxlab-logo.png" alt="" width="40" height="40" />
+        <a class="brand" href="../../">
+          <img class="brand__mark" src="../../assets/img/chauxlab-logo.png" alt="" width="40" height="40" />
           <span class="brand__name">ChauxLab Institute</span>
         </a>
         <nav class="nav" aria-label="Principal">
-          <a href="../ojs/">OJS</a>
+          <a href="../../ojs/">OJS</a>
           <div class="nav__dropdown">
-            <a href="../libros/" aria-current="page">Libros</a>
+            <a href="../../libros/" aria-current="page">Libros</a>
             <button class="nav__dropdown-toggle" type="button" aria-expanded="false" aria-controls="libros-menu">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
               <span class="skip">Mostrar series</span>
             </button>
             <ul class="nav__submenu" id="libros-menu">
-              <li><a href="../libros/" aria-current="page">Catálogo completo</a></li>
-              <li><a href="../libros/ia-aplicada/">Serie IA aplicada</a></li>
-              <li><a href="../libros/guias-academicas/">Serie Guías académicas</a></li>
-              <li><a href="../libros/fundamentos/">Serie Fundamentos</a></li>
-              <li><a href="../libros/patologia-medica/">Serie Médica</a></li>
+              <li><a href="../../libros/">Catálogo completo</a></li>
+              <li><a href="../../libros/ia-aplicada/" aria-current="page">Serie IA aplicada</a></li>
+              <li><a href="../../libros/guias-academicas/">Serie Guías académicas</a></li>
+              <li><a href="../../libros/fundamentos/">Serie Fundamentos</a></li>
+              <li><a href="../../libros/patologia-medica/">Serie Médica</a></li>
             </ul>
           </div>
-          <a href="../publicaciones/">Publicaciones</a>
-          <a href="../investigacion/">Investigación</a>
-          <a href="../contacto/">Contacto</a>
+          <a href="../../publicaciones/">Publicaciones</a>
+          <a href="../../investigacion/">Investigación</a>
+          <a href="../../contacto/">Contacto</a>
         </nav>
       </div>
     </header>
@@ -52,17 +52,21 @@
     <main id="contenido">
       <header class="page-hero">
         <div class="page-hero__inner">
-          <p class="eyebrow">Editorial ChauxLab</p>
-          <h1>Catálogo editorial</h1>
+          <p class="eyebrow">Serie completa · 12 volúmenes</p>
+          <h1>IA aplicada</h1>
           <p>
-            Libros digitales de ChauxLab Institute, organizados por serie.
+            Cómo usar inteligencia artificial en cada etapa del proceso de investigación
+            científica, volumen por volumen.
           </p>
         </div>
       </header>
 
       <section class="section">
         <div class="section__inner">
-          <div id="catalogo" class="book-groups" aria-live="polite">
+          <p style="margin: 0 0 2rem">
+            <a href="../">← Ver catálogo completo</a>
+          </p>
+          <div id="catalogo" aria-live="polite">
             <p class="muted">Cargando catálogo…</p>
           </div>
         </div>
@@ -76,10 +80,10 @@
       </div>
     </footer>
 
-    <script src="../assets/js/nav.js"></script>
-    <script src="../assets/js/catalog.js"></script>
+    <script src="../../assets/js/nav.js"></script>
+    <script src="../../assets/js/catalog.js"></script>
     <script>
-      renderCatalog({ rootId: "catalogo", base: "../" });
+      renderCatalog({ rootId: "catalogo", base: "../../", filter: "IA aplicada" });
     </script>
   </body>
 </html>

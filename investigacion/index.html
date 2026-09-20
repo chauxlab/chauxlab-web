@@ -28,7 +28,20 @@
         </a>
         <nav class="nav" aria-label="Principal">
           <a href="../ojs/">OJS</a>
-          <a href="../libros/">Libros</a>
+          <div class="nav__dropdown">
+            <a href="../libros/">Libros</a>
+            <button class="nav__dropdown-toggle" type="button" aria-expanded="false" aria-controls="libros-menu">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+              <span class="skip">Mostrar series</span>
+            </button>
+            <ul class="nav__submenu" id="libros-menu">
+              <li><a href="../libros/">Catálogo completo</a></li>
+              <li><a href="../libros/ia-aplicada/">Serie IA aplicada</a></li>
+              <li><a href="../libros/guias-academicas/">Serie Guías académicas</a></li>
+              <li><a href="../libros/fundamentos/">Serie Fundamentos</a></li>
+              <li><a href="../libros/patologia-medica/">Serie Médica</a></li>
+            </ul>
+          </div>
           <a href="../publicaciones/">Publicaciones</a>
           <a href="../investigacion/" aria-current="page">Investigación</a>
           <a href="../contacto/">Contacto</a>
@@ -96,5 +109,7 @@
         <p><a href="mailto:editorial@chauxlab.com">editorial@chauxlab.com</a></p>
       </div>
     </footer>
+
+    <script src="../assets/js/nav.js"></script>
   </body>
 </html>

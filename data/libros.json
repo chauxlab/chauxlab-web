@@ -1,29 +1,266 @@
 [
   {
     "slug": "ia-aplicada-01-receta",
-    "title": "El método receta",
+    "title": "El método RECETA: Del prompt genérico al output que necesitás",
     "collection": "IA aplicada",
-    "volume": 1,
+    "author": "Alcides Chaux",
+    "price": "Gs. 30.000",
+    "cover": "assets/img/libros/ia-aplicada-01-receta.jpg",
     "available": false,
     "url_pagopar": "",
-    "note": "URL de pago pendiente de alta en PagoPar"
+    "note": "Enlace de pago pendiente"
+  },
+  {
+    "slug": "ia-aplicada-02-protocolos-investigacion",
+    "title": "IA para protocolos de investigación",
+    "collection": "IA aplicada",
+    "author": "Alcides Chaux",
+    "price": "Gs. 30.000",
+    "cover": "assets/img/libros/ia-aplicada-02-protocolos-investigacion.jpg",
+    "available": false,
+    "url_pagopar": "",
+    "note": "Enlace de pago pendiente"
+  },
+  {
+    "slug": "ia-aplicada-03-revision-literatura",
+    "title": "IA para la revisión de la literatura",
+    "collection": "IA aplicada",
+    "author": "Alcides Chaux",
+    "price": "Gs. 30.000",
+    "cover": "assets/img/libros/ia-aplicada-03-revision-literatura.jpg",
+    "available": false,
+    "url_pagopar": "",
+    "note": "Enlace de pago pendiente"
+  },
+  {
+    "slug": "ia-aplicada-04-analisis-cuantitativos",
+    "title": "IA para análisis cuantitativos",
+    "collection": "IA aplicada",
+    "author": "Alcides Chaux",
+    "price": "Gs. 30.000",
+    "cover": "assets/img/libros/ia-aplicada-04-analisis-cuantitativos.jpg",
+    "available": false,
+    "url_pagopar": "",
+    "note": "Enlace de pago pendiente"
+  },
+  {
+    "slug": "ia-aplicada-05-analisis-cualitativos",
+    "title": "IA para análisis cualitativos",
+    "collection": "IA aplicada",
+    "author": "Alcides Chaux",
+    "price": "Gs. 30.000",
+    "cover": "assets/img/libros/ia-aplicada-05-analisis-cualitativos.jpg",
+    "available": false,
+    "url_pagopar": "",
+    "note": "Enlace de pago pendiente"
+  },
+  {
+    "slug": "ia-aplicada-06-diseno-investigacion",
+    "title": "IA para el diseño de investigación",
+    "collection": "IA aplicada",
+    "author": "Alcides Chaux",
+    "price": "Gs. 20.000",
+    "cover": "assets/img/libros/ia-aplicada-06-diseno-investigacion.jpg",
+    "available": false,
+    "url_pagopar": "",
+    "note": "Enlace de pago pendiente"
+  },
+  {
+    "slug": "ia-aplicada-07-revisiones-sistematicas",
+    "title": "IA para revisiones sistemáticas",
+    "collection": "IA aplicada",
+    "author": "Alcides Chaux",
+    "price": "Gs. 20.000",
+    "cover": "assets/img/libros/ia-aplicada-07-revisiones-sistematicas.jpg",
+    "available": false,
+    "url_pagopar": "",
+    "note": "Enlace de pago pendiente"
+  },
+  {
+    "slug": "ia-aplicada-08-diseno-instrumentos",
+    "title": "IA para el diseño de instrumentos de medición",
+    "collection": "IA aplicada",
+    "author": "Alcides Chaux",
+    "price": "Gs. 20.000",
+    "cover": "assets/img/libros/ia-aplicada-08-diseno-instrumentos.jpg",
+    "available": false,
+    "url_pagopar": "",
+    "note": "Enlace de pago pendiente"
+  },
+  {
+    "slug": "ia-aplicada-09-redaccion-academica",
+    "title": "IA para redacción académica",
+    "collection": "IA aplicada",
+    "author": "Alcides Chaux",
+    "price": "Gs. 20.000",
+    "cover": "assets/img/libros/ia-aplicada-09-redaccion-academica.jpg",
+    "available": false,
+    "url_pagopar": "",
+    "note": "Enlace de pago pendiente"
+  },
+  {
+    "slug": "ia-aplicada-10-divulgacion-cientifica",
+    "title": "IA para la divulgación científica",
+    "collection": "IA aplicada",
+    "author": "Alcides Chaux",
+    "price": "",
+    "cover": "assets/img/libros/ia-aplicada-10-divulgacion-cientifica.jpg",
+    "available": false,
+    "url_pagopar": "",
+    "note": "Título nuevo; precio y enlace de pago pendientes"
+  },
+  {
+    "slug": "ia-aplicada-11-etica-investigacion",
+    "title": "IA para la ética de la investigación",
+    "collection": "IA aplicada",
+    "author": "Alcides Chaux",
+    "price": "",
+    "cover": "assets/img/libros/ia-aplicada-11-etica-investigacion.jpg",
+    "available": false,
+    "url_pagopar": "",
+    "note": "Título nuevo; precio y enlace de pago pendientes"
+  },
+  {
+    "slug": "ia-aplicada-12-gestion-proyectos",
+    "title": "IA para la gestión de proyectos de investigación",
+    "collection": "IA aplicada",
+    "author": "Alcides Chaux",
+    "price": "",
+    "cover": "assets/img/libros/ia-aplicada-12-gestion-proyectos.jpg",
+    "available": false,
+    "url_pagopar": "",
+    "note": "Título nuevo; precio y enlace de pago pendientes"
   },
   {
     "slug": "guias-01-revision-sistematica",
-    "title": "Guía de revisión sistemática",
+    "title": "Puentes hacia la evidencia: El arte de la revisión sistemática",
     "collection": "Guías académicas",
-    "volume": 1,
+    "author": "Alcides Chaux y Paola Britos",
+    "price": "Gs. 65.000",
+    "cover": "assets/img/libros/guias-01-revision-sistematica.jpg",
     "available": false,
     "url_pagopar": "",
-    "note": "URL de pago pendiente de alta en PagoPar"
+    "note": "Enlace de pago pendiente"
+  },
+  {
+    "slug": "guias-02-seleccion-revistas",
+    "title": "El navegante de la ciencia: Domina el arte de seleccionar la revista adecuada",
+    "collection": "Guías académicas",
+    "author": "Alcides Chaux y Paola Britos",
+    "price": "Gs. 65.000",
+    "cover": "assets/img/libros/guias-02-seleccion-revistas.jpg",
+    "available": false,
+    "url_pagopar": "",
+    "note": "Enlace de pago pendiente"
+  },
+  {
+    "slug": "guias-03-navegando-publicacion",
+    "title": "Navegando el universo de la publicación académica: Una bitácora para el investigador moderno",
+    "collection": "Guías académicas",
+    "author": "Alcides Chaux y Paola Britos",
+    "price": "Gs. 65.000",
+    "cover": "assets/img/libros/guias-03-navegando-publicacion.jpg",
+    "available": false,
+    "url_pagopar": "",
+    "note": "Enlace de pago pendiente"
+  },
+  {
+    "slug": "guias-04-protocolos-impactantes",
+    "title": "El puente hacia la investigación: Cómo redactar protocolos impactantes",
+    "collection": "Guías académicas",
+    "author": "Alcides Chaux y Paola Britos",
+    "price": "Gs. 65.000",
+    "cover": "assets/img/libros/guias-04-protocolos-impactantes.jpg",
+    "available": true,
+    "url_pagopar": "https://pago.pagopar.com/6eptw",
+    "note": ""
+  },
+  {
+    "slug": "guias-05-brujula-investigador",
+    "title": "La brújula del investigador: Navegando la ética de la publicación académica",
+    "collection": "Guías académicas",
+    "author": "Alcides Chaux y Paola Britos",
+    "price": "Gs. 65.000",
+    "cover": "assets/img/libros/guias-05-brujula-investigador.jpg",
+    "available": false,
+    "url_pagopar": "",
+    "note": "Enlace de pago pendiente"
   },
   {
     "slug": "fundamentos-01-metodologia",
-    "title": "Fundamentos de metodología de la investigación",
+    "title": "Fundamentos de metodología de la investigación: De la curiosidad al conocimiento",
     "collection": "Fundamentos",
-    "volume": 1,
+    "author": "Alcides Chaux",
+    "price": "Gs. 75.000",
+    "cover": "assets/img/libros/fundamentos-01-metodologia.jpg",
     "available": false,
     "url_pagopar": "",
-    "note": "URL de pago pendiente de alta en PagoPar"
+    "note": "Enlace de pago pendiente"
+  },
+  {
+    "slug": "fundamentos-02-bioetica",
+    "title": "Fundamentos de bioética: Una brújula para los dilemas de la vida",
+    "collection": "Fundamentos",
+    "author": "Alcides Chaux",
+    "price": "Gs. 75.000",
+    "cover": "assets/img/libros/fundamentos-02-bioetica.jpg",
+    "available": false,
+    "url_pagopar": "",
+    "note": "Enlace de pago pendiente"
+  },
+  {
+    "slug": "fundamentos-03-redaccion-cientifica",
+    "title": "Fundamentos de redacción científica: Del hallazgo a la publicación",
+    "collection": "Fundamentos",
+    "author": "Alcides Chaux",
+    "price": "Gs. 75.000",
+    "cover": "assets/img/libros/fundamentos-03-redaccion-cientifica.jpg",
+    "available": false,
+    "url_pagopar": "",
+    "note": "Enlace de pago pendiente"
+  },
+  {
+    "slug": "fundamentos-04-inteligencia-artificial",
+    "title": "Fundamentos de inteligencia artificial: Del dato al discernimiento",
+    "collection": "Fundamentos",
+    "author": "Alcides Chaux",
+    "price": "",
+    "cover": "assets/img/libros/fundamentos-04-inteligencia-artificial.jpg",
+    "available": false,
+    "url_pagopar": "",
+    "note": "Título nuevo; precio y enlace de pago pendientes"
+  },
+  {
+    "slug": "patologia-volumen-1",
+    "title": "Manual de Patología Médica: Volumen 1",
+    "collection": "Manual de Patología Médica",
+    "author": "Paola Britos",
+    "price": "Gs. 150.000",
+    "cover": "assets/img/libros/patologia-volumen-1.jpg",
+    "available": false,
+    "url_pagopar": "",
+    "note": "Enlace de pago pendiente"
+  },
+  {
+    "slug": "patologia-volumen-2",
+    "title": "Manual de Patología Médica: Volumen 2",
+    "collection": "Manual de Patología Médica",
+    "author": "Paola Britos",
+    "price": "Gs. 150.000",
+    "cover": "assets/img/libros/patologia-volumen-2.jpg",
+    "available": false,
+    "url_pagopar": "",
+    "note": "Enlace de pago pendiente"
+  },
+  {
+    "slug": "patologia-casos",
+    "title": "Casos clínicos en Patología Médica: Complemento del Manual de Patología Médica",
+    "collection": "Manual de Patología Médica",
+    "author": "Paola Britos",
+    "price": "",
+    "cover": "assets/img/libros/patologia-casos.jpg",
+    "available": false,
+    "url_pagopar": "",
+    "note": "Título nuevo; precio y enlace de pago pendientes"
   }
 ]
