@@ -8,6 +8,18 @@
       name="description"
       content="El equipo de ChauxLab Institute y cómo contactarnos para cotizar servicios OJS, editorial o investigación."
     />
+    <link rel="canonical" href="https://chauxlab.com/contacto/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="ChauxLab Institute" />
+    <meta property="og:url" content="https://chauxlab.com/contacto/" />
+    <meta property="og:title" content="Quiénes somos — ChauxLab Institute" />
+    <meta property="og:description" content="El equipo de ChauxLab Institute y cómo contactarnos para cotizar servicios OJS, editorial o investigación." />
+    <meta property="og:image" content="https://chauxlab.com/assets/img/chauxlab-logo.png" />
+    <meta property="og:locale" content="es_PY" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Quiénes somos — ChauxLab Institute" />
+    <meta name="twitter:description" content="El equipo de ChauxLab Institute y cómo contactarnos para cotizar servicios OJS, editorial o investigación." />
+    <meta name="twitter:image" content="https://chauxlab.com/assets/img/chauxlab-logo.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -49,7 +61,7 @@
               <span class="skip">Mostrar revistas</span>
             </button>
             <ul class="nav__submenu" id="revistas-menu">
-              <li><a href="https://scriptascientia.com/" target="_blank" rel="noopener noreferrer">Scripta Scientia ↗</a></li>
+              <li><a href="https://scriptascientia.com/" target="_blank" rel="noopener noreferrer"><em>Scripta Scientia</em> ↗</a></li>
             </ul>
           </div>
           <a href="../investigacion/">Investigación</a>
@@ -64,7 +76,7 @@
           <p class="eyebrow">Quiénes somos</p>
           <h1>El equipo detrás de ChauxLab</h1>
           <p>
-            Un laboratorio pequeño, con roles claros y trayectoria real en investigación,
+            Un equipo compacto, con roles claros y trayectoria real en investigación,
             edición científica y práctica clínica.
           </p>
         </div>
@@ -81,8 +93,11 @@
                 <p class="team-card__bio">
                   Investigador, escritor académico y bioeticista, con más de dos décadas de
                   experiencia en redacción académica y análisis de datos. Editor en jefe de
-                  Scripta Scientia; autor de cientos de artículos y capítulos de libro, con
-                  más de 7.000 citas a nivel mundial.
+                  <em>Scripta Scientia</em>; autor de cientos de artículos y capítulos de
+                  libro, con más de 7.000 citas a nivel mundial.
+                </p>
+                <p class="team-card__orcid">
+                  <a href="https://orcid.org/0000-0002-5824-9867" target="_blank" rel="noopener noreferrer">ORCID: 0000-0002-5824-9867 ↗</a>
                 </p>
               </div>
             </article>
@@ -95,6 +110,9 @@
                   Médica cirujana, docente universitaria e investigadora paraguaya,
                   especializada en revisiones sistemáticas, metaanálisis y edición
                   científica. Socia fundadora de ChauxLab Institute.
+                </p>
+                <p class="team-card__orcid">
+                  <a href="https://orcid.org/0009-0000-8655-9881" target="_blank" rel="noopener noreferrer">ORCID: 0009-0000-8655-9881 ↗</a>
                 </p>
               </div>
             </article>
@@ -113,11 +131,7 @@
             </li>
             <li>
               <span>Institución</span>
-              ChauxLab Institute E.A.S. · Asunción, Paraguay
-            </li>
-            <li>
-              <span>Sitio</span>
-              <a href="https://chauxlab.com">chauxlab.com</a>
+              ChauxLab Institute E.A.S. · Asunción y Ciudad del Este, Paraguay
             </li>
           </ul>
         </div>
@@ -128,8 +142,8 @@
           <p class="eyebrow">Solicitar cotización</p>
           <h2 class="section__title">Detalles del proyecto</h2>
           <p class="section__lede">
-            Al enviar este formulario se abre un correo prellenado hacia
-            editorial@chauxlab.com. Indicar el servicio de interés acelera la cotización.
+            Al enviar este formulario se abre un correo prellenado. Indicar el servicio de
+            interés acelera la cotización.
           </p>
           <form class="form" id="contact-form">
             <div class="form-row">
@@ -137,8 +151,8 @@
               <input id="cf-nombre" name="nombre" type="text" required />
             </div>
             <div class="form-row">
-              <label for="cf-contacto">Correo o WhatsApp</label>
-              <input id="cf-contacto" name="contacto" type="text" required />
+              <label for="cf-contacto">Correo electrónico</label>
+              <input id="cf-contacto" name="contacto" type="email" required />
             </div>
             <div class="form-row">
               <label for="cf-institucion">Institución</label>
@@ -156,21 +170,12 @@
               </select>
             </div>
             <div class="form-row">
-              <label for="cf-institucion-tipo">Institución nacional o internacional</label>
-              <select id="cf-institucion-tipo" name="tipo_institucion">
-                <option value="Nacional (Paraguay)">Nacional (Paraguay)</option>
-                <option value="Internacional">Internacional</option>
-              </select>
-            </div>
-            <div class="form-row">
               <label for="cf-mensaje">Mensaje</label>
               <textarea id="cf-mensaje" name="mensaje" placeholder="Breve descripción del proyecto o consulta"></textarea>
             </div>
             <button class="btn btn--primary form__submit" type="submit">Abrir correo con esta consulta</button>
             <p class="form__status">
-              Se abrirá el programa de correo predeterminado. También es posible escribir
-              directamente a
-              <a href="mailto:editorial@chauxlab.com">editorial@chauxlab.com</a>.
+              Se abrirá el programa de correo predeterminado con estos datos ya completados.
             </p>
           </form>
         </div>
@@ -179,7 +184,7 @@
 
     <footer class="site-footer">
       <div class="site-footer__inner">
-        <p><strong>ChauxLab Institute E.A.S.</strong> · Asunción, Paraguay</p>
+        <p><strong>ChauxLab Institute E.A.S.</strong> · Asunción y Ciudad del Este, Paraguay</p>
         <p><a href="mailto:editorial@chauxlab.com">editorial@chauxlab.com</a></p>
       </div>
     </footer>
@@ -203,15 +208,13 @@
         const contacto = data.get("contacto") || "";
         const institucion = data.get("institucion") || "";
         const servicio = data.get("servicio") || "";
-        const tipoInstitucion = data.get("tipo_institucion") || "";
         const mensaje = data.get("mensaje") || "";
 
         const subject = `Consulta ChauxLab — ${servicio}`;
         const body = [
           `Nombre: ${nombre}`,
-          `Correo o WhatsApp: ${contacto}`,
+          `Correo: ${contacto}`,
           `Institución: ${institucion}`,
-          `Tipo de institución: ${tipoInstitucion}`,
           `Servicio de interés: ${servicio}`,
           "",
           "Mensaje:",
