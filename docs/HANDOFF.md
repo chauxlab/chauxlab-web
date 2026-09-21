@@ -1,5 +1,32 @@
 # Handoff — listo para diseño (sesión siguiente)
 
+## Cierre de sesión — 2026-09-21
+
+Sitio en vivo: **https://chauxlab.com/** · último push web `8ef30e0`.
+
+### Hecho en esta sesión
+
+- Catálogo editorial **24/24** con links PagoPar (IA aplicada Gs. 45.000; Guías Gs. 45.000; Fundamentos Gs. 75.000; Patología vols. Gs. 150.000; Casos Gs. 75.000). Sync vía `herramientas/pagopar` (`sync_serie.py`).
+- DNS `www.chauxlab.com` OK (CNAME → `chauxlab.github.io`; HTTPS → apex).
+- Home: quitada sección **Método / Cómo trabajamos** (no calzaba con oferta concreta).
+- `/ojs/`: puente corto a Revistas científicas (sin duplicar contenido).
+- `/publicaciones/`: logo **Scripta Scientia** en grilla 2×2 con las revistas universitarias; copy “Revistas en línea”.
+- Decisiones de producto confirmadas: precio en cards de libros **no** (vive en PagoPar); sin demo OJS aparte (Scripta + revistas en producción); moneda base **Gs.**; PagoPar acepta pagos internacionales; “Serie Médica” OK; Fundamentos/Patología aprobados editorialmente.
+
+### Próxima sesión — sitio web (prioridad)
+
+1. **Páginas pilar de descubrimiento** (diferido a propósito). Bosquejar e implementar 3 piezas bajo `/recursos/` (o similar), enlazadas desde footer o submenu de OJS — no como quinto producto en nav. Candidatas: migrar revista a OJS; ISSN/DOI; M1 vs M2. Objetivo: tráfico de quien aún no conoce ChauxLab → cotización.
+2. **Prueba de entrega PDF** post-compra PagoPar (flujo operativo + ajustar `PRC-EBOOK-DELIVERY` sin Shopify).
+3. **KB:** actualizar procedimientos de venta/entrega; Shopify ya no es canal web.
+
+### No reabrir sin motivo
+
+- Mostrar precio en tarjetas del catálogo (precio en PagoPar).
+- Sandbox OJS aparte (evidencia = revistas en producción).
+- Precios OJS/libros en USD (base Gs.; conversión en pasarela).
+
+---
+
 Cierre de la fase de **infraestructura y publicación**. El sitio estático v1 está en vivo; la próxima sesión puede centrarse en **diseño / contenido visual** sin desbloquear hosting.
 
 ## Estado actual (2026-09-19)
