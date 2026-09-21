@@ -3,22 +3,22 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Quiénes somos — ChauxLab Institute</title>
+    <title>Solicitar cotización — ChauxLab Institute</title>
     <meta
       name="description"
-      content="El equipo de ChauxLab Institute y cómo contactarnos para cotizar servicios OJS, editorial o investigación."
+      content="Formulario para cotizar servicios OJS, editorial o investigación con ChauxLab Institute."
     />
     <link rel="canonical" href="https://chauxlab.com/contacto/" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="ChauxLab Institute" />
     <meta property="og:url" content="https://chauxlab.com/contacto/" />
-    <meta property="og:title" content="Quiénes somos — ChauxLab Institute" />
-    <meta property="og:description" content="El equipo de ChauxLab Institute y cómo contactarnos para cotizar servicios OJS, editorial o investigación." />
+    <meta property="og:title" content="Solicitar cotización — ChauxLab Institute" />
+    <meta property="og:description" content="Formulario para cotizar servicios OJS, editorial o investigación con ChauxLab Institute." />
     <meta property="og:image" content="https://chauxlab.com/assets/img/chauxlab-logo.png" />
     <meta property="og:locale" content="es_PY" />
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="Quiénes somos — ChauxLab Institute" />
-    <meta name="twitter:description" content="El equipo de ChauxLab Institute y cómo contactarnos para cotizar servicios OJS, editorial o investigación." />
+    <meta name="twitter:title" content="Solicitar cotización — ChauxLab Institute" />
+    <meta name="twitter:description" content="Formulario para cotizar servicios OJS, editorial o investigación con ChauxLab Institute." />
     <meta name="twitter:image" content="https://chauxlab.com/assets/img/chauxlab-logo.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -65,98 +65,36 @@
             </ul>
           </div>
           <a href="../investigacion/">Investigación</a>
-          <a href="../contacto/" aria-current="page">Quiénes somos</a>
+          <a href="../quienes-somos/">Quiénes somos</a>
         </nav>
       </div>
     </header>
 
     <main id="contenido">
-      <header class="page-hero">
-        <div class="page-hero__inner">
-          <p class="eyebrow">Quiénes somos</p>
-          <h1>El equipo detrás de ChauxLab</h1>
-          <p>
-            Un equipo compacto, con roles claros y trayectoria real en investigación,
-            edición científica y práctica clínica.
-          </p>
-        </div>
-      </header>
-
-      <section class="section">
+      <section class="section" id="cotizacion">
         <div class="section__inner">
-          <div class="team-grid">
-            <article class="team-card">
-              <img class="team-card__photo" src="../assets/img/equipo/alcides-chaux.jpg" alt="Foto de Alcides Chaux" width="88" height="88" />
-              <div>
-                <p class="team-card__name">Dr. Alcides Chaux</p>
-                <p class="team-card__role">Presidente</p>
-                <p class="team-card__bio">
-                  Investigador, escritor académico y bioeticista, con más de dos décadas de
-                  experiencia en redacción académica y análisis de datos. Editor en jefe de
-                  <em>Scripta Scientia</em>; autor de cientos de artículos y capítulos de
-                  libro, con más de 7.000 citas a nivel mundial.
-                </p>
-                <p class="team-card__orcid">
-                  <a href="https://orcid.org/0000-0002-5824-9867" target="_blank" rel="noopener noreferrer">ORCID: 0000-0002-5824-9867 ↗</a>
-                </p>
-              </div>
-            </article>
-            <article class="team-card">
-              <img class="team-card__photo" src="../assets/img/equipo/paola-britos.jpg" alt="Foto de Paola Britos" width="88" height="88" />
-              <div>
-                <p class="team-card__name">Dra. Paola Britos</p>
-                <p class="team-card__role">Directora</p>
-                <p class="team-card__bio">
-                  Médica cirujana, docente universitaria e investigadora paraguaya,
-                  especializada en revisiones sistemáticas, metaanálisis y edición
-                  científica. Socia fundadora de ChauxLab Institute.
-                </p>
-                <p class="team-card__orcid">
-                  <a href="https://orcid.org/0009-0000-8655-9881" target="_blank" rel="noopener noreferrer">ORCID: 0009-0000-8655-9881 ↗</a>
-                </p>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section section--alt">
-        <div class="section__inner contact-block">
-          <p class="eyebrow">Hablemos</p>
-          <h2 class="section__title">Contacto</h2>
-          <ul class="contact-list">
-            <li>
-              <span>Editorial y ventas</span>
-              <a href="mailto:editorial@chauxlab.com">editorial@chauxlab.com</a>
-            </li>
-            <li>
-              <span>Institución</span>
-              ChauxLab Institute E.A.S. · Asunción y Ciudad del Este, Paraguay
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="section__inner">
-          <p class="eyebrow">Solicitar cotización</p>
-          <h2 class="section__title">Detalles del proyecto</h2>
-          <p class="section__lede">
-            Al enviar este formulario se abre un correo prellenado. Indicar el servicio de
-            interés acelera la cotización.
+          <p class="eyebrow" id="cotizacion-eyebrow">Solicitar cotización</p>
+          <h1 class="section__title" id="cotizacion-title">Detalles del proyecto</h1>
+          <p class="section__lede" id="cotizacion-lede">
+            Completá el formulario. Indicar el servicio de interés acelera la cotización.
           </p>
+          <p class="form-context" id="cotizacion-context" hidden></p>
           <form class="form" id="contact-form">
+            <div class="form-row form-row--honeypot" aria-hidden="true">
+              <label for="cf-botcheck">No completar</label>
+              <input id="cf-botcheck" name="botcheck" type="checkbox" tabindex="-1" autocomplete="off" />
+            </div>
             <div class="form-row">
               <label for="cf-nombre">Nombre y apellido</label>
-              <input id="cf-nombre" name="nombre" type="text" required />
+              <input id="cf-nombre" name="nombre" type="text" required autocomplete="name" />
             </div>
             <div class="form-row">
               <label for="cf-contacto">Correo electrónico</label>
-              <input id="cf-contacto" name="contacto" type="email" required />
+              <input id="cf-contacto" name="contacto" type="email" required autocomplete="email" />
             </div>
             <div class="form-row">
               <label for="cf-institucion">Institución</label>
-              <input id="cf-institucion" name="institucion" type="text" />
+              <input id="cf-institucion" name="institucion" type="text" autocomplete="organization" />
             </div>
             <div class="form-row">
               <label for="cf-servicio">Servicio de interés</label>
@@ -173,10 +111,10 @@
               <label for="cf-mensaje">Mensaje</label>
               <textarea id="cf-mensaje" name="mensaje" placeholder="Breve descripción del proyecto o consulta"></textarea>
             </div>
-            <button class="btn btn--primary form__submit" type="submit">Abrir correo con esta consulta</button>
-            <p class="form__status">
-              Se abrirá el programa de correo predeterminado con estos datos ya completados.
-            </p>
+            <button class="btn btn--primary form__submit" type="submit" id="cf-submit">
+              Enviar consulta
+            </button>
+            <p class="form__status" id="cf-status" hidden></p>
           </form>
         </div>
       </section>
@@ -189,45 +127,8 @@
       </div>
     </footer>
 
-    <script>
-      const servicioPorParametro = {
-        m1: "Nube OJS (M1)",
-        m2: "Gestión editorial OJS (M2)",
-        m3: "Nube OJS Integral (M3)",
-      };
-      const parametroServicio = new URLSearchParams(location.search).get("servicio");
-      if (parametroServicio && servicioPorParametro[parametroServicio]) {
-        const selectServicio = document.getElementById("cf-servicio");
-        selectServicio.value = servicioPorParametro[parametroServicio];
-      }
-
-      document.getElementById("contact-form").addEventListener("submit", function (event) {
-        event.preventDefault();
-        const data = new FormData(event.target);
-        const nombre = data.get("nombre") || "";
-        const contacto = data.get("contacto") || "";
-        const institucion = data.get("institucion") || "";
-        const servicio = data.get("servicio") || "";
-        const mensaje = data.get("mensaje") || "";
-
-        const subject = `Consulta ChauxLab — ${servicio}`;
-        const body = [
-          `Nombre: ${nombre}`,
-          `Correo: ${contacto}`,
-          `Institución: ${institucion}`,
-          `Servicio de interés: ${servicio}`,
-          "",
-          "Mensaje:",
-          mensaje,
-        ].join("\n");
-
-        window.location.href =
-          "mailto:editorial@chauxlab.com?subject=" +
-          encodeURIComponent(subject) +
-          "&body=" +
-          encodeURIComponent(body);
-      });
-    </script>
+    <script src="../assets/js/contact-config.js"></script>
+    <script src="../assets/js/contact.js"></script>
     <script src="../assets/js/nav.js"></script>
   </body>
 </html>

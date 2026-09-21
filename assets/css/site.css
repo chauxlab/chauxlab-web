@@ -1073,7 +1073,34 @@ a:hover {
 .form__status {
   font-size: 0.9rem;
   color: var(--slate);
-  margin: 0;
+  margin: 0.85rem 0 0;
+}
+
+.form__status[data-tone="ok"] {
+  color: #2f6b4f;
+}
+
+.form__status[data-tone="error"] {
+  color: #8a2f2f;
+}
+
+.form-row--honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.form-context {
+  margin: 0 0 1.5rem;
+  padding: 1rem 1.15rem;
+  max-width: 36rem;
+  border-left: 3px solid var(--gold);
+  background: rgba(184, 149, 74, 0.08);
+  color: var(--navy-mid);
+  font-size: 0.98rem;
+  line-height: 1.5;
 }
 
 /* —— Contact —— */
