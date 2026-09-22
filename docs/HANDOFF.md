@@ -30,7 +30,8 @@ Sitio en vivo: **https://chauxlab.com/** · branch `main`.
 - **P2 sitio (2026-09-22):**
   - OJS: sección «Guías breves» + enlace ISSN FAQ → `/recursos/`; M1 vs M2 se presenta como guía (precios en `/ojs/#tabla`).
   - Nav Revistas: «Todas las revistas» + Scripta.
-  - `/legal/ebooks/`: pasarela externa (sin nombrar proveedor en copy público); sin datos personales en chauxlab.com; copyright compartido del catálogo (uso justo + aviso educativo); entrega y devoluciones.
+  - `/legal/ebooks/`: pasarela externa (sin nombrar proveedor); sin datos personales en chauxlab.com; copyright compartido; entrega/devoluciones.
+  - Dirección legal publicada: **Herrera 3991 · CP 001230 · Asunción, Paraguay** (única dirección postal; CDE = oficina, no domicilio legal).
   - Fichas por libro: **no** (aún no se justifican). Operativo PDF/KB/DNS: **sesión nueva**.
 
 ### Próxima sesión — sitio web (prioridad)
