@@ -27,12 +27,17 @@ Sitio en vivo: **https://chauxlab.com/** · branch `main`.
   - `/investigacion/`: oferta institucional concreta (diagnóstico, ruta, seguimiento); sin «Lógica de laboratorio»; CTA `contacto/?servicio=investigacion`.
   - Serie Médica: H1/nav = Serie Médica; eyebrow/contenido = Manual de Patología Médica (relación explícita).
   - Logos uni: autorizados vía contrato (ver arriba).
+- **P2 sitio (2026-09-22):**
+  - OJS: sección «Guías breves» + enlace ISSN FAQ → `/recursos/`; M1 vs M2 se presenta como guía (precios en `/ojs/#tabla`).
+  - Nav Revistas: «Todas las revistas» + Scripta.
+  - `/legal/ebooks/`: pasarela externa (sin nombrar proveedor en copy público); sin datos personales en chauxlab.com; copyright compartido del catálogo (uso justo + aviso educativo); entrega y devoluciones.
+  - Fichas por libro: **no** (aún no se justifican). Operativo PDF/KB/DNS: **sesión nueva**.
 
 ### Próxima sesión — sitio web (prioridad)
 
-1. **Prueba de entrega PDF** post-compra PagoPar (flujo operativo + ajustar `PRC-EBOOK-DELIVERY` sin Shopify).
-2. **KB:** actualizar procedimientos de venta/entrega; Shopify ya no es canal web.
-3. Diseño visual (home / tipografía / páginas interiores) cuando toque — ver sección más abajo.
+1. **Operativo (sesión aparte, diferido):** prueba de entrega PDF post-PagoPar + `PRC-EBOOK-DELIVERY`; KB sin Shopify; DNS CNAMEs Shopify / `www`.
+2. **Diseño visual** — pausado a pedido.
+3. Fichas por libro — **fuera** hasta que el catálogo lo justifique.
 
 ### No reabrir sin motivo
 
