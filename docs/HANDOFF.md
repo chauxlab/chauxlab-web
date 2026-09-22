@@ -11,12 +11,15 @@
 - En vivo por HTTP: **http://alcideschaux.com/** (hub). `www` → apex.
 - ChauxLab `/quienes-somos/`: enlace «Sitio personal» → alcideschaux.com (`c1b5558`).
 - Solicitudes ID: ROR enviada antes; Ringgold+ISNI enviada (formulario CCC).
+- **Shopify DNS eliminado** (2026-09-22): en `chauxlab.com` y `alcideschaux.com` quitados CNAME `tienda`, `cuenta`, `mailer*`, `*_domainkey` → myshopify. Quedan solo Pages + correo/MX. Canal de venta = PagoPar vía `chauxlab.com/libros/`.
+- Enlaces tienda: `copyright.typ` → catálogo chauxlab; post blog actualizado (sin `tienda.chauxlab.com`).
 
 ### Pendiente / seguimiento
 
 1. **HTTPS** en alcideschaux.com: esperar cert de GitHub Pages → Enforce HTTPS (aún `*.github.io`).
-2. Opcional: 4º A `185.199.111.153`; despublicar Google Site cuando HTTPS OK.
+2. Opcional: 4º A `185.199.111.153` en alcideschaux; despublicar Google Site cuando HTTPS OK.
 3. Anotar ROR / Ringgold / ISNI en sitio+HANDOFF cuando lleguen.
+4. Shopify: plan en cancelación (tienda puede seguir online hasta fin de suscripción); no reactivar CNAMEs.
 
 ### Frontera de marca
 
@@ -115,7 +118,8 @@ Cierre de la fase de **infraestructura y publicación**. El sitio estático v1 e
 | Apex DNS | A → `185.199.108–111.153` (GitHub Pages) en DreamHost |
 | `www` | CNAME → `chauxlab.github.io` **creado en panel DreamHost**; si aún no resuelve, esperar publicación/propagación (SOA puede tardar) |
 | `academia.chauxlab.com` | Hosting viejo quitado; público NXDOMAIN |
-| Shopify | Descontinuado en el sitio (pueden quedar CNAMEs huérfanos en DreamHost: `cuenta`, `tienda`, etc.) |
+| Shopify | Descontinuado; CNAMEs DreamHost eliminados (2026-09-22). Venta = PagoPar. |
+
 
 ## Decisiones de producto (no reabrir sin motivo)
 
@@ -175,10 +179,9 @@ CNAME                     # chauxlab.com
 ## Pendientes no-diseño (backlog)
 
 - Confirmar propagación de `www` y que el certificado Pages incluya `www.chauxlab.com`.
-- Limpiar CNAMEs Shopify residuales en DreamHost si ya no se usan.
 - Actualizar KB / procedimientos que mencionen Shopify como canal web.
 - Fase 2: API PagoPar (Worker u otro backend); no en este repo estático.
-- `copyright.typ` / tienda URL en repos editoriales cuando el dominio quede estable.
+- `copyright.typ` apunta a `chauxlab.com/libros/` (ya no tienda Shopify).
 - **Resuelto (2026-09-19):** ISSN incluido en el precio en M1/M2/M3, sin excepción. Si la institución ya tiene ISSN propio, se mantiene el suyo; no hay cargo aparte ni descuento por no requerir el trámite.
 - **Resuelto (2026-09-19):** descuento de 10% en M2 y M3 por pago anual adelantado (Gs. 54.000.000/año en M2; Gs. 108.000.000/año en M3, IVA incluido). Publicado en `ojs/index.html` y FAQ. M1 no aplica (ya es anual).
 - **Resuelto (2026-09-19):** vigencia contractual se comunica como "12 meses, prorrogable de común acuerdo" en el sitio (antes "sin renovación automática", que daba impresión de corte fijo). No implica cambio en la mecánica real de renovación (sigue sin ser automática).
