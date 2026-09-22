@@ -13,6 +13,20 @@ Sitio en vivo: **https://chauxlab.com/** · branch `main`.
   - [`/recursos/m1-vs-m2/`](https://chauxlab.com/recursos/m1-vs-m2/)
 - Footer ampliado en todo el sitio: ChauxLab · Servicios · Recursos · Institución (incluye Quiénes somos y Solicitar cotización).
 - **Investigación:** tercer artículo internacional con afiliación ChauxLab — Chaux A. "The Central Role of Immune Checkpoint Receptors in Genitourinary Tumor Immunotherapy…" *Receptors* (MDPI) 2026. DOI 10.3390/receptors5020018. [mdpi.com/2813-2564/5/2/18](https://www.mdpi.com/2813-2564/5/2/18).
+- **Auditoría de contenido** (diseño pausado): ver canvas de hallazgos P0–P2.
+- **Verdades operativas (2026-09-22):**
+  - FAQ **portabilidad** restaurada en `/ojs/` (`#faq-portabilidad`): exportación completa en M1/M2/M3; política contractual.
+  - FAQ **soporte** precisa M2 (soporte sobre servidor de la institución) vs M1/M3 (hosting ChauxLab).
+  - Tabla ISSN: «Incluido en el precio» (el «cuando corresponda» del trámite sigue en FAQ).
+  - Naming M3 unificado a **Integral (M3)** en formulario y `contact.js` (alineado a la tabla).
+- **Catálogo libros:** sin CTA «Adquirir PDF» por tarjeta (ruido). En encabezados: formato digital + clic en el título para info y precio (PagoPar).
+- **Home lede:** nombra la oferta (OJS, libros digitales, revistas, investigación); sin CTAs en hero.
+- **P1 (2026-09-22):**
+  - `/publicaciones/`: title/H1/eyebrow alineados a **Revistas científicas** (URL legacy `/publicaciones/` se mantiene).
+  - `/quienes-somos/`: CTA a Solicitar cotización.
+  - `/investigacion/`: oferta institucional concreta (diagnóstico, ruta, seguimiento); sin «Lógica de laboratorio»; CTA `contacto/?servicio=investigacion`.
+  - Serie Médica: H1/nav = Serie Médica; eyebrow/contenido = Manual de Patología Médica (relación explícita).
+  - Logos uni: autorizados vía contrato (ver arriba).
 
 ### Próxima sesión — sitio web (prioridad)
 
@@ -140,7 +154,7 @@ CNAME                     # chauxlab.com
 - Requisito M2 documentado en FAQ del sitio: la institución debe dar acceso de administrador a su instancia OJS y acceso al servidor (cPanel o equivalente) antes de iniciar la gestión editorial.
 - **Resuelto (2026-09-20):** portabilidad de datos documentada en FAQ de `ojs/index.html`: en las tres modalidades la institución recibe exportación completa, suficiente para reinstalar en otro servidor; es política y consta en contrato.
 - **Resuelto (2026-09-20):** backups periódicos con restitución en caso de falla, incluidos como parte del soporte técnico en las tres modalidades. Documentado en FAQ.
-- **Resuelto (2026-09-20):** Scripta Scientia (https://scriptascientia.com/) ahora tiene enlace directo desde el sitio — evidencia para Latindex. Nav renombrada: "Libros" → **"Libros académicos"**; "Publicaciones" → **"Revistas científicas"**; "OJS" → **"Servicios OJS"** (10 páginas). La página `publicaciones/index.html` ya no nombra instituciones específicas (se sacaron "Medicina Familiar" y "Revista UniNorte..." por falta de autorización expresa); ahora es una página breve de **"Gestión editorial"**: describe el servicio en general (universidades paraguayas, públicas y privadas), enlaza a `/ojs/` para modalidades y precios, y presenta Scripta Scientia como evidencia real (no demo) con datos verificados (acceso abierto diamante, revisión doble ciego, publicación continua).
+- **Resuelto (2026-09-20; aclarado 2026-09-22):** Scripta Scientia enlace directo; nav «Libros académicos» / «Revistas científicas» / «Servicios OJS». La grilla de revistas universitarias en `/publicaciones/` (UniNorte, MedFam UNA, UCP) **sí está autorizada** como parte del contrato de gestión editorial con cada institución — no retirar.
 - **Ajustado (2026-09-20):** el desplegable de "Revistas científicas" quedó minimalista — solo el enlace a Scripta Scientia, sin el párrafo descriptivo que tenía antes (esa descripción ahora vive en la página `/publicaciones/`).
 - **Investigación rediseñada (2026-09-20):** el foco pasó a ChauxLab como instituto de investigación (antes solo era "acompañamos proyectos"). Nueva sección "Líneas de investigación" con las dos líneas propias (Biología molecular del cáncer, Bioética aplicada, definidas por los investigadores de ChauxLab) y nueva sección "Publicaciones internacionales" con los 2 artículos reales con afiliación ChauxLab Institute (verificados en PubMed y Discovery Medicine, autor Alcides Chaux):
   - Chaux A. "Bioethical challenges in the implementation of targeted anti-tumor therapies in low-resource settings: a perspective from Latin America." Explor Target Antitumor Ther. 2026;7:1002397. DOI 10.37349/etat.2026.1002397.

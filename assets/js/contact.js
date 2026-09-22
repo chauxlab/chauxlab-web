@@ -23,12 +23,20 @@
         "Solicito cotización de la modalidad M2 (Gestión editorial).\n\nURL o datos de la instancia OJS actual:\n",
     },
     m3: {
-      value: "Nube OJS Integral (M3)",
+      value: "Integral (M3)",
       label: "M3 · Integral",
       blurb:
         "Cotización para instancia OJS + gestión editorial con un solo interlocutor.",
       message:
         "Solicito cotización de la modalidad M3 (Integral).\n\nContexto de la revista / institución:\n",
+    },
+    investigacion: {
+      value: "Investigación institucional",
+      label: "Investigación institucional",
+      blurb:
+        "Consulta para acompañar un programa o proyecto de investigación y publicación de envergadura.",
+      message:
+        "Solicito conversar sobre un proyecto de investigación institucional.\n\nContexto (institución, objetivo, plazo aproximado):\n",
     },
   };
 
