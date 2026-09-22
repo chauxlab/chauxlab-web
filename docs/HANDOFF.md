@@ -1,5 +1,30 @@
 # Handoff — listo para diseño (sesión siguiente)
 
+## Cierre de sesión — 2026-09-22 (tarde) — hub personal
+
+### Hecho
+
+- **Hub estático** [`alcideschaux/alcideschaux-web`](https://github.com/alcideschaux/alcideschaux-web) → preview https://alcideschaux.github.io/alcideschaux-web/
+- Una página: identidad, trayectoria, ORCID/Scholar/LinkedIn, CTA a ChauxLab + Blog (Substack). Sin catálogo.
+- Redirects legado Google Sites: `/recursos/libros/` → chauxlab libros; IA → `libros/ia-aplicada/`; webinarios/biblioteca → Substack; `/inicio/` → `/`.
+- DreamHost: dominio **DNS Only**; apex A → GitHub Pages; `www` CNAME → `alcideschaux.github.io`.
+- En vivo por HTTP: **http://alcideschaux.com/** (hub). `www` → apex.
+- ChauxLab `/quienes-somos/`: enlace «Sitio personal» → alcideschaux.com (`c1b5558`).
+- Solicitudes ID: ROR enviada antes; Ringgold+ISNI enviada (formulario CCC).
+
+### Pendiente / seguimiento
+
+1. **HTTPS** en alcideschaux.com: esperar cert de GitHub Pages → Enforce HTTPS (aún `*.github.io`).
+2. Opcional: 4º A `185.199.111.153`; despublicar Google Site cuando HTTPS OK.
+3. Anotar ROR / Ringgold / ISNI en sitio+HANDOFF cuando lleguen.
+
+### Frontera de marca
+
+- `alcideschaux.com` = persona (hub mínimo).
+- `chauxlab.com` = instituto + oferta (libros, revistas, OJS, investigación).
+
+---
+
 ## Cierre de sesión — 2026-09-22
 
 Sitio en vivo: **https://chauxlab.com/** · branch `main`.
