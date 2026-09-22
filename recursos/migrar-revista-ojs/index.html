@@ -3,22 +3,22 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Serie Médica — Libros — ChauxLab Institute</title>
+    <title>Migrar una revista a OJS — ChauxLab Institute</title>
     <meta
       name="description"
-      content="Manual de Patología Médica de ChauxLab Institute: volúmenes 1 y 2, más casos clínicos."
+      content="Cómo pasar una revista científica existente a Open Journal Systems con ChauxLab: evaluación inicial, modalidades M1 o M3, y evidencia en producción."
     />
-    <link rel="canonical" href="https://chauxlab.com/libros/patologia-medica/" />
+    <link rel="canonical" href="https://chauxlab.com/recursos/migrar-revista-ojs/" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="ChauxLab Institute" />
-    <meta property="og:url" content="https://chauxlab.com/libros/patologia-medica/" />
-    <meta property="og:title" content="Serie Médica — Libros — ChauxLab Institute" />
-    <meta property="og:description" content="Manual de Patología Médica de ChauxLab Institute: volúmenes 1 y 2, más casos clínicos." />
+    <meta property="og:url" content="https://chauxlab.com/recursos/migrar-revista-ojs/" />
+    <meta property="og:title" content="Migrar una revista a OJS — ChauxLab Institute" />
+    <meta property="og:description" content="Cómo pasar una revista científica existente a Open Journal Systems con ChauxLab: evaluación inicial, modalidades M1 o M3, y evidencia en producción." />
     <meta property="og:image" content="https://chauxlab.com/assets/img/chauxlab-logo.png" />
     <meta property="og:locale" content="es_PY" />
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="Serie Médica — Libros — ChauxLab Institute" />
-    <meta name="twitter:description" content="Manual de Patología Médica de ChauxLab Institute: volúmenes 1 y 2, más casos clínicos." />
+    <meta name="twitter:title" content="Migrar una revista a OJS — ChauxLab Institute" />
+    <meta name="twitter:description" content="Cómo pasar una revista científica existente a Open Journal Systems con ChauxLab: evaluación inicial, modalidades M1 o M3, y evidencia en producción." />
     <meta name="twitter:image" content="https://chauxlab.com/assets/img/chauxlab-logo.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -41,7 +41,7 @@
         <nav class="nav" aria-label="Principal">
           <a href="../../ojs/">Servicios OJS</a>
           <div class="nav__dropdown">
-            <a href="../../libros/" aria-current="page">Libros académicos</a>
+            <a href="../../libros/">Libros académicos</a>
             <button class="nav__dropdown-toggle" type="button" aria-expanded="false" aria-controls="libros-menu">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
               <span class="skip">Mostrar series</span>
@@ -51,7 +51,7 @@
               <li><a href="../../libros/ia-aplicada/">Serie IA aplicada</a></li>
               <li><a href="../../libros/guias-academicas/">Serie Guías académicas</a></li>
               <li><a href="../../libros/fundamentos/">Serie Fundamentos</a></li>
-              <li><a href="../../libros/patologia-medica/" aria-current="page">Serie Médica</a></li>
+              <li><a href="../../libros/patologia-medica/">Serie Médica</a></li>
             </ul>
           </div>
           <div class="nav__dropdown">
@@ -73,23 +73,91 @@
     <main id="contenido">
       <header class="page-hero">
         <div class="page-hero__inner">
-          <p class="eyebrow">Serie · 3 títulos</p>
-          <h1>Serie Médica</h1>
+          <p class="eyebrow">Recursos</p>
+          <h1>Migrar una revista a OJS</h1>
           <p>
-            Manual de Patología Médica, en dos volúmenes, más un libro complementario de
-            casos clínicos.
+            Para instituciones que ya publican (o quieren publicar) y necesitan una
+            instancia Open Journal Systems operable, con o sin gestión editorial.
           </p>
         </div>
       </header>
 
       <section class="section">
         <div class="section__inner">
-          <p style="margin: 0 0 2rem">
-            <a href="../">← Ver catálogo completo</a>
-          </p>
-          <div id="catalogo" aria-live="polite">
-            <p class="muted">Cargando catálogo…</p>
+          <p class="eyebrow">Para quién es</p>
+          <h2 class="section__title">Cuándo tiene sentido migrar</h2>
+          <div class="resource-copy">
+            <p>
+              Si la revista vive en WordPress, un portal institucional o un flujo
+              manual de archivos, OJS ordena envíos, revisión por pares, metadatos y
+              publicación continua en un solo lugar. También aplica a revistas nuevas
+              que quieren nacer ya en una plataforma reconocida por índices y
+              repositorios.
+            </p>
+            <p>
+              No hace falta tener OJS hoy. ChauxLab provee la instancia en las
+              modalidades M1 (nube) y M3 (nube + gestión editorial). Si ya tienen OJS
+              propio y solo necesitan operación editorial, la ruta es
+              <a href="../m1-vs-m2/">M2</a>.
+            </p>
           </div>
+        </div>
+      </section>
+
+      <section class="section section--alt">
+        <div class="section__inner">
+          <p class="eyebrow">Antes de decidir</p>
+          <h2 class="section__title">Reporte de salud sin costo</h2>
+          <div class="resource-copy">
+            <p>
+              Para instituciones con una revista en funcionamiento, elaboramos un
+              reporte del estado actual como parte de la conversación inicial, sin
+              cargo adicional. Sirve para ver qué conviene migrar, qué conservar y
+              qué modalidad encaja — sin compromiso de contratación.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section__inner">
+          <p class="eyebrow">Qué aporta ChauxLab</p>
+          <h2 class="section__title">M1 o M3, según el equipo</h2>
+          <div class="resource-copy">
+            <p>
+              En M1 y M3 la instancia queda operable en 48–72 horas tras recibir los
+              datos necesarios (dominio, denominación de la revista, etc.). Incluyen
+              soporte técnico durante la vigencia, ISSN cuando corresponda y depósitos
+              DOI dentro del cupo anual.
+            </p>
+            <p>
+              M1 es para equipos que gestionarán la revista ellos mismos sobre la
+              nube de ChauxLab. M3 suma gestión del flujo editorial y producción
+              post-aceptación con un solo interlocutor. El detalle de precios y
+              alcances está en la
+              <a href="../../ojs/#tabla">tabla de modalidades</a>.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--alt">
+        <div class="section__inner">
+          <p class="eyebrow">Evidencia</p>
+          <h2 class="section__title">Revistas que podés abrir ahora</h2>
+          <div class="resource-copy">
+            <p>
+              <em>Scripta Scientia</em> —nuestra revista— y las revistas universitarias
+              cuya gestión editorial acompañamos. Ahí se ve el resultado del servicio,
+              no un sandbox aparte.
+            </p>
+          </div>
+          <p style="margin-top: 1.5rem">
+            <a class="btn btn--primary" href="../../ojs/">Ver servicios OJS</a>
+          </p>
+          <p style="margin-top: 0.85rem">
+            <a href="../../publicaciones/">Ver revistas científicas →</a>
+          </p>
         </div>
       </section>
     </main>
@@ -114,9 +182,9 @@
         <div class="site-footer__col">
           <p class="site-footer__heading">Recursos</p>
           <ul class="site-footer__links">
-            <li><a href="../../recursos/migrar-revista-ojs/">Migrar una revista a OJS</a></li>
-            <li><a href="../../recursos/issn-doi/">ISSN y DOI</a></li>
-            <li><a href="../../recursos/m1-vs-m2/">M1 vs M2</a></li>
+            <li><a href="../migrar-revista-ojs/" aria-current="page">Migrar una revista a OJS</a></li>
+            <li><a href="../issn-doi/">ISSN y DOI</a></li>
+            <li><a href="../m1-vs-m2/">M1 vs M2</a></li>
           </ul>
         </div>
         <div class="site-footer__col">
@@ -130,9 +198,5 @@
     </footer>
 
     <script src="../../assets/js/nav.js"></script>
-    <script src="../../assets/js/catalog.js"></script>
-    <script>
-      renderCatalog({ rootId: "catalogo", base: "../../", filter: "Manual de Patología Médica" });
-    </script>
   </body>
 </html>

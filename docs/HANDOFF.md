@@ -1,5 +1,35 @@
 # Handoff — listo para diseño (sesión siguiente)
 
+## Cierre de sesión — 2026-09-22
+
+Sitio en vivo: **https://chauxlab.com/** · branch `main`.
+
+### Hecho en esta sesión
+
+- Home: **sin CTAs en el hero** (quitados “Solicitar cotización” y “Ver qué ofrecemos”). Cotización queda en footer / OJS / contacto — no como primer gesto.
+- **Tres páginas pilar de descubrimiento** bajo `/recursos/` (fuera del nav):
+  - [`/recursos/migrar-revista-ojs/`](https://chauxlab.com/recursos/migrar-revista-ojs/)
+  - [`/recursos/issn-doi/`](https://chauxlab.com/recursos/issn-doi/)
+  - [`/recursos/m1-vs-m2/`](https://chauxlab.com/recursos/m1-vs-m2/)
+- Footer ampliado en todo el sitio: ChauxLab · Servicios · Recursos · Institución (incluye Quiénes somos y Solicitar cotización).
+- **Investigación:** tercer artículo internacional con afiliación ChauxLab — Chaux A. "The Central Role of Immune Checkpoint Receptors in Genitourinary Tumor Immunotherapy…" *Receptors* (MDPI) 2026. DOI 10.3390/receptors5020018. [mdpi.com/2813-2564/5/2/18](https://www.mdpi.com/2813-2564/5/2/18).
+
+### Próxima sesión — sitio web (prioridad)
+
+1. **Prueba de entrega PDF** post-compra PagoPar (flujo operativo + ajustar `PRC-EBOOK-DELIVERY` sin Shopify).
+2. **KB:** actualizar procedimientos de venta/entrega; Shopify ya no es canal web.
+3. Diseño visual (home / tipografía / páginas interiores) cuando toque — ver sección más abajo.
+
+### No reabrir sin motivo
+
+- Mostrar precio en tarjetas del catálogo (precio en PagoPar).
+- Sandbox OJS aparte (evidencia = revistas en producción).
+- Precios OJS/libros en USD (base Gs.; conversión en pasarela).
+- CTAs de cotización en el hero de la home.
+- Quinto ítem “Recursos” en el nav principal (viven en el footer).
+
+---
+
 ## Cierre de sesión — 2026-09-21
 
 Sitio en vivo: **https://chauxlab.com/** · último push web `8ef30e0`.
@@ -13,9 +43,9 @@ Sitio en vivo: **https://chauxlab.com/** · último push web `8ef30e0`.
 - `/publicaciones/`: logo **Scripta Scientia** en grilla 2×2 con las revistas universitarias; copy “Revistas en línea”.
 - Decisiones de producto confirmadas: precio en cards de libros **no** (vive en PagoPar); sin demo OJS aparte (Scripta + revistas en producción); moneda base **Gs.**; PagoPar acepta pagos internacionales; “Serie Médica” OK; Fundamentos/Patología aprobados editorialmente.
 
-### Próxima sesión — sitio web (prioridad)
+### Próxima sesión — sitio web (prioridad) — *actualizado 2026-09-22*
 
-1. **Páginas pilar de descubrimiento** (diferido a propósito). Bosquejar e implementar 3 piezas bajo `/recursos/` (o similar), enlazadas desde footer o submenu de OJS — no como quinto producto en nav. Candidatas: migrar revista a OJS; ISSN/DOI; M1 vs M2. Objetivo: tráfico de quien aún no conoce ChauxLab → cotización.
+~~1. Páginas pilar de descubrimiento~~ → **hecho** (ver cierre 2026-09-22).
 2. **Prueba de entrega PDF** post-compra PagoPar (flujo operativo + ajustar `PRC-EBOOK-DELIVERY` sin Shopify).
 3. **KB:** actualizar procedimientos de venta/entrega; Shopify ya no es canal web.
 
@@ -77,10 +107,14 @@ Cierre de la fase de **infraestructura y publicación**. El sitio estático v1 e
 
 ```text
 index.html
-ojs/  libros/  publicaciones/  investigacion/  contacto/
+ojs/  libros/  publicaciones/  investigacion/  contacto/  quienes-somos/
+recursos/                 # pilares de descubrimiento (footer, no nav)
+  migrar-revista-ojs/
+  issn-doi/
+  m1-vs-m2/
 assets/css/site.css
 assets/img/chauxlab-logo.png
-data/libros.json          # stubs; available:false hasta URLs PagoPar
+data/libros.json
 CNAME                     # chauxlab.com
 .github/workflows/pages.yml
 ```
