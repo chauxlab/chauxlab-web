@@ -1,5 +1,21 @@
 # Handoff — listo para diseño (sesión siguiente)
 
+## Cierre de sesión — 2026-09-23 — HTTPS hub personal
+
+### Hecho
+
+- **https://alcideschaux.com/** con certificado Let's Encrypt (`CN=alcideschaux.com`, hasta 2026-12-22). Enforce HTTPS activo en Pages.
+- El cert había quedado colgado en `*.github.io` (navegador: no seguro). Se relanzó quitando y volviendo a poner el dominio custom en Pages.
+- `https://www.alcideschaux.com/` redirige al apex.
+
+### Pendiente
+
+1. Opcional: 4º A `185.199.111.153` en `alcideschaux.com` (el cert salió con tres A).
+2. Anotar ROR / Ringgold / ISNI cuando lleguen.
+3. Shopify: no reactivar CNAMEs; la tienda puede seguir online hasta fin de suscripción.
+
+---
+
 ## Cierre de sesión — 2026-09-22 (tarde) — hub personal
 
 ### Hecho
@@ -8,7 +24,7 @@
 - Una página: identidad, trayectoria, ORCID/Scholar/LinkedIn, CTA a ChauxLab + Blog (Substack). Sin catálogo.
 - Redirects legado Google Sites: `/recursos/libros/` → chauxlab libros; IA → `libros/ia-aplicada/`; webinarios/biblioteca → Substack; `/inicio/` → `/`.
 - DreamHost: dominio **DNS Only**; apex A → GitHub Pages; `www` CNAME → `alcideschaux.github.io`.
-- En vivo por HTTP: **http://alcideschaux.com/** (hub). `www` → apex.
+- En vivo: **https://alcideschaux.com/** (hub; HTTPS activo desde 2026-09-23). `www` → apex.
 - ChauxLab `/quienes-somos/`: enlace «Sitio personal» → alcideschaux.com (`c1b5558`).
 - Solicitudes ID: ROR enviada antes; Ringgold+ISNI enviada (formulario CCC).
 - **Shopify DNS eliminado** (2026-09-22): en `chauxlab.com` y `alcideschaux.com` quitados CNAME `tienda`, `cuenta`, `mailer*`, `*_domainkey` → myshopify. Quedan solo Pages + correo/MX. Canal de venta = PagoPar vía `chauxlab.com/libros/`.
@@ -16,10 +32,9 @@
 
 ### Pendiente / seguimiento
 
-1. **HTTPS** en alcideschaux.com: esperar cert de GitHub Pages → Enforce HTTPS (aún `*.github.io`).
-2. Opcional: 4º A `185.199.111.153` en alcideschaux; despublicar Google Site cuando HTTPS OK.
-3. Anotar ROR / Ringgold / ISNI en sitio+HANDOFF cuando lleguen.
-4. Shopify: plan en cancelación (tienda puede seguir online hasta fin de suscripción); no reactivar CNAMEs.
+1. Opcional: 4º A `185.199.111.153` en alcideschaux.
+2. Anotar ROR / Ringgold / ISNI en sitio+HANDOFF cuando lleguen.
+3. Shopify: plan en cancelación (tienda puede seguir online hasta fin de suscripción); no reactivar CNAMEs.
 
 ### Frontera de marca
 
