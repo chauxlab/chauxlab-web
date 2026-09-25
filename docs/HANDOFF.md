@@ -1,5 +1,19 @@
 # Handoff — listo para diseño (sesión siguiente)
 
+## Cierre de sesión — 2026-09-24 — ISNI y Ringgold
+
+### Hecho
+
+- Copyright Clearance Center (Ringgold), caso 02484891, correo del 2026-09-24. Nombre en el registro: «ChauxLab Institute EAS». Ringgold ID **856561**. ISNI **0000 0005 3162 9976** (https://isni.org/isni/0000000531629976).
+- Publicados en `/quienes-somos/` (bloque «La institución») y en el JSON-LD `Organization` de la home.
+- Identidad canónica: `chauxlab-kb` base maestra, sección 3 (v2.0.2).
+
+### Pendiente
+
+- ROR: formulario enviado el 2026-09-22. No publicar hasta que asignen el código.
+
+---
+
 ## Cierre de sesión — 2026-09-23 — HTTPS hub personal
 
 ### Hecho
@@ -11,7 +25,7 @@
 ### Pendiente
 
 1. Opcional: 4º A `185.199.111.153` en `alcideschaux.com` (el cert salió con tres A).
-2. Anotar ROR / Ringgold / ISNI cuando lleguen.
+2. ROR pendiente de asignación (formulario 2026-09-22). Ringgold e ISNI publicados el 2026-09-24.
 3. Shopify: no reactivar CNAMEs; la tienda puede seguir online hasta fin de suscripción.
 
 ---
@@ -33,7 +47,7 @@
 ### Pendiente / seguimiento
 
 1. Opcional: 4º A `185.199.111.153` en alcideschaux.
-2. Anotar ROR / Ringgold / ISNI en sitio+HANDOFF cuando lleguen.
+2. ROR pendiente de asignación. Ringgold e ISNI ya están en el sitio y en este handoff (2026-09-24).
 3. Shopify: plan en cancelación (tienda puede seguir online hasta fin de suscripción); no reactivar CNAMEs.
 
 ### Frontera de marca
