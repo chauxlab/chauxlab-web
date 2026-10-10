@@ -1,5 +1,37 @@
 # Handoff — listo para diseño (sesión siguiente)
 
+## Cierre de sesión — 2026-10-10 — entrega ebooks R2
+
+### Hecho
+
+- Primera venta PagoPar real: pedido **#29902661**, *IA para revisiones sistemáticas*, comprador Augusto Granoski Pauli. Entrega hecha por **Google Drive** (correo ya enviado).
+- Mapa de entrega: `data/pagopar-delivery-map.json` (slug / título PagoPar / `url_pagopar` / `dist_relpath` / `r2_key`).
+- Cloudflare: cuenta `alcides.chaux@chauxlab.com`, R2 bucket **`chauxlab-ebooks`** (privado), 24/24 PDFs sincronizados desde `editorial/books/books/**/dist/`.
+- Worker **`chauxlab-ebooks`**: `https://chauxlab-ebooks.alcides-chaux.workers.dev`
+  - `PUT /admin/upload?key=…` (Bearer `ADMIN_SECRET`)
+  - `POST /admin/sign` → URL firmada HMAC
+  - `GET /d?key=&exp=&sig=` → descarga
+- Tooling local (fuera de este repo web): `chauxlab/herramientas/ebook-delivery/` (`sync_r2.sh`, `worker/`, `.env` gitignored).
+- MCP Cloudflare + skills instalados en Cursor (`~/.cursor/mcp.json`).
+
+### Pendiente — retomar aquí (entrega ebooks)
+
+1. **Plantilla de correo de entrega R2** (español, pedido + título + link firmado + soporte `editorial@chauxlab.com`).
+2. **Script `deliver.sh <slug> <email> <pedido>`** que firme (TTL 7d) y cree borrador Gmail (o imprima el JSON del sign).
+3. **Procedimiento asistido post-PagoPar:** leer correo `noreply@pagopar.com` → match mapa → `deliver` → etiquetar hilo / registrar pedido enviado.
+4. **KB / PRC-EBOOK-DELIVERY:** actualizar sin Shopify; canal = PagoPar + R2 (Drive solo respaldo interno).
+5. **ISBNs en el mapa** para matching más robusto (hoy solo vol. 7 tiene ISBN del correo).
+6. **Dominio propio opcional** (`descargas.chauxlab.com` o similar) cuando `chauxlab.com` esté en Cloudflare DNS; hoy el Worker usa `*.workers.dev`.
+7. **Fase 2 — webhook PagoPar** → Worker valida → firma → envía solo (fuera de este repo estático).
+8. Pedido #29902661: no reenviar por R2 salvo reclamo del comprador; opcional volver Drive a restringido si quedó “cualquiera con el vínculo”.
+
+### No reabrir sin motivo
+
+- Reenviar esta venta por R2 “por las dudas”.
+- Subir PDFs al repo público de GitHub Pages.
+
+---
+
 ## Cierre de sesión — 2026-09-24 — ISNI y Ringgold
 
 ### Hecho
