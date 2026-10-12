@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Resultado del pago — ChauxLab Institute</title>
+    <meta name="robots" content="noindex" />
+    <link rel="canonical" href="https://chauxlab.com/pagopar/resultado/" />
+    <link rel="icon" href="../../assets/img/chauxlab-logo.png" type="image/png" />
+    <script>
+      (function () {
+        var params = new URLSearchParams(window.location.search);
+        var hash = params.get("hash") || "";
+        var target =
+          "https://chauxlab-ebooks.alcides-chaux.workers.dev/pagopar/resultado/" +
+          (hash ? "?hash=" + encodeURIComponent(hash) : "");
+        window.location.replace(target);
+      })();
+    </script>
+  </head>
+  <body>
+    <p>Redirigiendo al estado del pedido…</p>
+    <p>
+      Si no ocurre automáticamente,
+      <a id="fallback" href="https://chauxlab-ebooks.alcides-chaux.workers.dev/pagopar/resultado/">continuá aquí</a>.
+    </p>
+    <script>
+      (function () {
+        var params = new URLSearchParams(window.location.search);
+        var hash = params.get("hash") || "";
+        var a = document.getElementById("fallback");
+        if (hash) a.href += "?hash=" + encodeURIComponent(hash);
+      })();
+    </script>
+  </body>
+</html>

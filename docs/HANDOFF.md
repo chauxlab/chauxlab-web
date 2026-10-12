@@ -14,16 +14,59 @@
 - Tooling local (fuera de este repo web): `chauxlab/herramientas/ebook-delivery/` (`sync_r2.sh`, `worker/`, `.env` gitignored).
 - MCP Cloudflare + skills instalados en Cursor (`~/.cursor/mcp.json`).
 
+### Decidido — correo de entrega (2026-10-11)
+
+| Campo | Valor |
+|---|---|
+| Proveedor | **Resend** |
+| From | `editorial@chauxlab.com` |
+| BCC | `alcides.chaux@chauxlab.com` (cada entrega) |
+| Reply-To | `editorial@chauxlab.com` |
+| Contenido | Link R2 firmado (no adjunto PDF) |
+
+Gmail queda para operación humana / fase 1 asistida. Cloudflare Email Sending descartado mientras el DNS de `chauxlab.com` siga en DreamHost.
+
+### Hecho — Resend + deliver (2026-10-11)
+
+- Dominio `chauxlab.com` **Verified** en Resend (`sa-east-1`); MX `send` + DKIM/SPF/CNAME OK. Apex Gmail intacto.
+- API key `chauxlab-ebook-delivery` en `herramientas/ebook-delivery/.env` (`RESEND_API_KEY`).
+- Plantillas `templates/delivery.{html,txt}` + script `./deliver.sh <slug> <email> <pedido>` (+ `--dry-run`).
+- Prueba real: pedido `TEST-RESEND` a `alcides.chaux@chauxlab.com` (vol. 7).
+
+### Hecho — procedimiento asistido (2026-10-11)
+
+- `PROCEDURE.md` + `match_pagopar.py` + `from_pagopar.sh` (pegar mail → match mapa → `deliver` → `delivered.log`).
+- Gmail: tras envío, etiqueta **`Estado/ENVIADO`** (ya existía). Evitar doble envío vía `delivered.log`.
+- #29902661 registrado en log como `drive` (no reenviar).
+
+### Hecho — KB + ISBNs (2026-10-11)
+
+- `PRC-EBOOK-DELIVERY` / `TPL-EBOOK-DELIVERY` v1.1.0 + `archivo/ebooks.md`: PagoPar + R2 + Resend; Shopify fuera.
+- Mapa: ISBN en **23/24** libros (`match_keys` incluye `isbn`). Falta ISBN individual de **Casos clínicos** (pendiente BN). Vols. 1–2 Patología comparten ISBN de obra completa.
+
+### Hecho — Fase 2 Worker webhook (2026-10-11/12)
+
+- Worker `chauxlab-ebooks` en vivo con webhook + Resend:
+  - `POST /pagopar/respuesta` (`sha1(private+hash)`, HTTP 200 + `resultado`, entrega async)
+  - `GET /pagopar/resultado/?hash=`
+  - Health: `pagopar:true`, `resend:true` (secrets ya cargados)
+- Código: `herramientas/ebook-delivery/worker/` (`index.js`, `wrangler.toml`, `set-secrets.sh`)
+- Redirect estático: `/pagopar/resultado/` → Worker
+- Panel **DESARROLLO** (comercio ChauxLab Institute - API, id 82989) URLs guardadas:
+  - Redirección `https://chauxlab-ebooks.alcides-chaux.workers.dev/pagopar/resultado/?hash=($hash)`
+  - Respuesta `https://chauxlab-ebooks.alcides-chaux.workers.dev/pagopar/respuesta`
+- Tokens de links = **PRODUCCIÓN** (`herramientas/pagopar/.env`). Con `entorno=1` (comercio en producción), `regenerarToken()` **no permite** regenerar (“Comercio en producción”). No hace falta regenerar.
+- Pedido a `soporte@upay.com.py` **enviado** (2026-10-11) pidiendo URLs de **PRODUCCIÓN**.
+- Secrets DEV cargados (`PAGOPAR_*_DEV`).
+- **Prueba webhook** (2026-10-12): el botón “Simular pago” del panel **no sirve** (comercio ya en producción). Se envió POST firmado a `/pagopar/respuesta` → HTTP 200, token inválido 401, entrega Resend **TEST-SIM-80a0d116** (revisiones sistemáticas) a `alcides.chaux@chauxlab.com`. Replay idempotente OK.
+
 ### Pendiente — retomar aquí (entrega ebooks)
 
-1. **Plantilla de correo de entrega R2** (español, pedido + título + link firmado + soporte `editorial@chauxlab.com`).
-2. **Script `deliver.sh <slug> <email> <pedido>`** que firme (TTL 7d) y cree borrador Gmail (o imprima el JSON del sign).
-3. **Procedimiento asistido post-PagoPar:** leer correo `noreply@pagopar.com` → match mapa → `deliver` → etiquetar hilo / registrar pedido enviado.
-4. **KB / PRC-EBOOK-DELIVERY:** actualizar sin Shopify; canal = PagoPar + R2 (Drive solo respaldo interno).
-5. **ISBNs en el mapa** para matching más robusto (hoy solo vol. 7 tiene ISBN del correo).
-6. **Dominio propio opcional** (`descargas.chauxlab.com` o similar) cuando `chauxlab.com` esté en Cloudflare DNS; hoy el Worker usa `*.workers.dev`.
-7. **Fase 2 — webhook PagoPar** → Worker valida → firma → envía solo (fuera de este repo estático).
-8. Pedido #29902661: no reenviar por R2 salvo reclamo del comprador; opcional volver Drive a restringido si quedó “cualquiera con el vínculo”.
+1. **Esperar uPay** (URLs PRODUCCIÓN). Mientras: entrega asistida ante ventas nuevas.
+2. Tras uPay: verificar panel PRODUCCIÓN → pago real de prueba → Actividades recientes + mail automático.
+3. **ISBN Casos clínicos** cuando BN asigne número.
+4. Dominio opcional `descargas.chauxlab.com` si DNS a Cloudflare.
+5. #29902661: no reenviar por R2 salvo reclamo.
 
 ### No reabrir sin motivo
 

@@ -1,13 +1,14 @@
 {
   "version": 1,
-  "updated": "2026-10-10",
+  "updated": "2026-10-11",
   "purpose": "Mapa estable PagoPar → PDF de distribución. Al actualizar un libro, recompilar sobre la misma ruta dist/; no cambiar este mapa ni los enlaces de entrega.",
   "books_root": "/Users/alcideschaux/chauxlab/editorial/books/books",
   "pdf_path_rule": "Siempre apuntar a <books_root>/<dist_relpath>. El nombre del archivo en dist/ es canónico; reemplazar el PDF in-place al republicar.",
   "match_keys": [
     "slug",
     "title_pagopar",
-    "url_pagopar"
+    "url_pagopar",
+    "isbn"
   ],
   "books": [
     {
@@ -19,7 +20,8 @@
       "book_dir": "ia-aplicada/01-receta",
       "dist_relpath": "ia-aplicada/01-receta/dist/ia-aplicada-receta.pdf",
       "attachment_filename": "ia-aplicada-receta.pdf",
-      "r2_key": "ia-aplicada/ia-aplicada-receta.pdf"
+      "r2_key": "ia-aplicada/ia-aplicada-receta.pdf",
+      "isbn": "978-99989-994-5-9"
     },
     {
       "slug": "ia-aplicada-02-protocolos-investigacion",
@@ -30,7 +32,8 @@
       "book_dir": "ia-aplicada/02-protocolos-investigacion",
       "dist_relpath": "ia-aplicada/02-protocolos-investigacion/dist/ia-aplicada-protocolos-investigacion.pdf",
       "attachment_filename": "ia-aplicada-protocolos-investigacion.pdf",
-      "r2_key": "ia-aplicada/ia-aplicada-protocolos-investigacion.pdf"
+      "r2_key": "ia-aplicada/ia-aplicada-protocolos-investigacion.pdf",
+      "isbn": "978-99989-994-6-6"
     },
     {
       "slug": "ia-aplicada-03-revision-literatura",
@@ -41,7 +44,8 @@
       "book_dir": "ia-aplicada/03-revision-literatura",
       "dist_relpath": "ia-aplicada/03-revision-literatura/dist/ia-aplicada-revision-literatura.pdf",
       "attachment_filename": "ia-aplicada-revision-literatura.pdf",
-      "r2_key": "ia-aplicada/ia-aplicada-revision-literatura.pdf"
+      "r2_key": "ia-aplicada/ia-aplicada-revision-literatura.pdf",
+      "isbn": "978-99989-994-7-3"
     },
     {
       "slug": "ia-aplicada-04-analisis-cuantitativos",
@@ -52,7 +56,8 @@
       "book_dir": "ia-aplicada/04-analisis-cuantitativos",
       "dist_relpath": "ia-aplicada/04-analisis-cuantitativos/dist/ia-aplicada-analisis-cuantitativos.pdf",
       "attachment_filename": "ia-aplicada-analisis-cuantitativos.pdf",
-      "r2_key": "ia-aplicada/ia-aplicada-analisis-cuantitativos.pdf"
+      "r2_key": "ia-aplicada/ia-aplicada-analisis-cuantitativos.pdf",
+      "isbn": "978-99989-994-8-0"
     },
     {
       "slug": "ia-aplicada-05-analisis-cualitativos",
@@ -63,7 +68,8 @@
       "book_dir": "ia-aplicada/05-analisis-cualitativos",
       "dist_relpath": "ia-aplicada/05-analisis-cualitativos/dist/ia-aplicada-analisis-cualitativos.pdf",
       "attachment_filename": "ia-aplicada-analisis-cualitativos.pdf",
-      "r2_key": "ia-aplicada/ia-aplicada-analisis-cualitativos.pdf"
+      "r2_key": "ia-aplicada/ia-aplicada-analisis-cualitativos.pdf",
+      "isbn": "978-99989-994-9-7"
     },
     {
       "slug": "ia-aplicada-06-diseno-investigacion",
@@ -74,7 +80,8 @@
       "book_dir": "ia-aplicada/06-diseno-investigacion",
       "dist_relpath": "ia-aplicada/06-diseno-investigacion/dist/ia-aplicada-diseno-investigacion.pdf",
       "attachment_filename": "ia-aplicada-diseno-investigacion.pdf",
-      "r2_key": "ia-aplicada/ia-aplicada-diseno-investigacion.pdf"
+      "r2_key": "ia-aplicada/ia-aplicada-diseno-investigacion.pdf",
+      "isbn": "978-99989-45-00-5"
     },
     {
       "slug": "ia-aplicada-07-revisiones-sistematicas",
@@ -100,7 +107,8 @@
       "book_dir": "ia-aplicada/08-diseno-instrumentos",
       "dist_relpath": "ia-aplicada/08-diseno-instrumentos/dist/ia-aplicada-diseno-instrumentos.pdf",
       "attachment_filename": "ia-aplicada-diseno-instrumentos.pdf",
-      "r2_key": "ia-aplicada/ia-aplicada-diseno-instrumentos.pdf"
+      "r2_key": "ia-aplicada/ia-aplicada-diseno-instrumentos.pdf",
+      "isbn": "978-99989-45-02-9"
     },
     {
       "slug": "ia-aplicada-09-redaccion-academica",
@@ -111,7 +119,8 @@
       "book_dir": "ia-aplicada/09-redaccion-academica",
       "dist_relpath": "ia-aplicada/09-redaccion-academica/dist/ia-aplicada-redaccion-academica.pdf",
       "attachment_filename": "ia-aplicada-redaccion-academica.pdf",
-      "r2_key": "ia-aplicada/ia-aplicada-redaccion-academica.pdf"
+      "r2_key": "ia-aplicada/ia-aplicada-redaccion-academica.pdf",
+      "isbn": "978-99989-45-03-6"
     },
     {
       "slug": "ia-aplicada-10-divulgacion-cientifica",
@@ -122,7 +131,8 @@
       "book_dir": "ia-aplicada/10-divulgacion-cientifica",
       "dist_relpath": "ia-aplicada/10-divulgacion-cientifica/dist/ia-aplicada-divulgacion-cientifica.pdf",
       "attachment_filename": "ia-aplicada-divulgacion-cientifica.pdf",
-      "r2_key": "ia-aplicada/ia-aplicada-divulgacion-cientifica.pdf"
+      "r2_key": "ia-aplicada/ia-aplicada-divulgacion-cientifica.pdf",
+      "isbn": "978-99989-45-04-3"
     },
     {
       "slug": "ia-aplicada-11-etica-investigacion",
@@ -133,7 +143,8 @@
       "book_dir": "ia-aplicada/11-etica-investigacion",
       "dist_relpath": "ia-aplicada/11-etica-investigacion/dist/ia-aplicada-etica-investigacion.pdf",
       "attachment_filename": "ia-aplicada-etica-investigacion.pdf",
-      "r2_key": "ia-aplicada/ia-aplicada-etica-investigacion.pdf"
+      "r2_key": "ia-aplicada/ia-aplicada-etica-investigacion.pdf",
+      "isbn": "978-99989-45-05-0"
     },
     {
       "slug": "ia-aplicada-12-gestion-proyectos",
@@ -145,7 +156,8 @@
       "dist_relpath": "ia-aplicada/12-gestion-proyectos-investigacion/dist/ia-aplicada-gestion-proyectos-investigacion.pdf",
       "attachment_filename": "ia-aplicada-gestion-proyectos-investigacion.pdf",
       "note": "Slug web omite '-investigacion'; la carpeta editorial sí lo incluye.",
-      "r2_key": "ia-aplicada/ia-aplicada-gestion-proyectos-investigacion.pdf"
+      "r2_key": "ia-aplicada/ia-aplicada-gestion-proyectos-investigacion.pdf",
+      "isbn": "978-99989-45-06-7"
     },
     {
       "slug": "guias-01-revision-sistematica",
@@ -156,7 +168,8 @@
       "book_dir": "guias-academicas/01-revision-sistematica",
       "dist_relpath": "guias-academicas/01-revision-sistematica/dist/guias-academicas-revision-sistematica.pdf",
       "attachment_filename": "guias-academicas-revision-sistematica.pdf",
-      "r2_key": "guias-academicas/guias-academicas-revision-sistematica.pdf"
+      "r2_key": "guias-academicas/guias-academicas-revision-sistematica.pdf",
+      "isbn": "978-99989-994-0-4"
     },
     {
       "slug": "guias-02-seleccion-revistas",
@@ -167,7 +180,8 @@
       "book_dir": "guias-academicas/02-seleccion-revistas",
       "dist_relpath": "guias-academicas/02-seleccion-revistas/dist/guias-academicas-seleccion-revistas.pdf",
       "attachment_filename": "guias-academicas-seleccion-revistas.pdf",
-      "r2_key": "guias-academicas/guias-academicas-seleccion-revistas.pdf"
+      "r2_key": "guias-academicas/guias-academicas-seleccion-revistas.pdf",
+      "isbn": "978-99989-994-4-2"
     },
     {
       "slug": "guias-03-navegando-publicacion",
@@ -178,7 +192,8 @@
       "book_dir": "guias-academicas/03-navegando-publicacion",
       "dist_relpath": "guias-academicas/03-navegando-publicacion/dist/guias-academicas-navegando-publicacion.pdf",
       "attachment_filename": "guias-academicas-navegando-publicacion.pdf",
-      "r2_key": "guias-academicas/guias-academicas-navegando-publicacion.pdf"
+      "r2_key": "guias-academicas/guias-academicas-navegando-publicacion.pdf",
+      "isbn": "978-99989-994-3-5"
     },
     {
       "slug": "guias-04-protocolos-impactantes",
@@ -189,7 +204,8 @@
       "book_dir": "guias-academicas/04-protocolos-impactantes",
       "dist_relpath": "guias-academicas/04-protocolos-impactantes/dist/guias-academicas-protocolos-impactantes.pdf",
       "attachment_filename": "guias-academicas-protocolos-impactantes.pdf",
-      "r2_key": "guias-academicas/guias-academicas-protocolos-impactantes.pdf"
+      "r2_key": "guias-academicas/guias-academicas-protocolos-impactantes.pdf",
+      "isbn": "978-99989-994-1-1"
     },
     {
       "slug": "guias-05-brujula-investigador",
@@ -200,7 +216,8 @@
       "book_dir": "guias-academicas/05-brujula-investigador",
       "dist_relpath": "guias-academicas/05-brujula-investigador/dist/guias-academicas-brujula-investigador.pdf",
       "attachment_filename": "guias-academicas-brujula-investigador.pdf",
-      "r2_key": "guias-academicas/guias-academicas-brujula-investigador.pdf"
+      "r2_key": "guias-academicas/guias-academicas-brujula-investigador.pdf",
+      "isbn": "978-99989-994-2-8"
     },
     {
       "slug": "fundamentos-01-metodologia",
@@ -211,7 +228,8 @@
       "book_dir": "fundamentos/01-metodologia",
       "dist_relpath": "fundamentos/01-metodologia/dist/fundamentos-metodologia.pdf",
       "attachment_filename": "fundamentos-metodologia.pdf",
-      "r2_key": "fundamentos/fundamentos-metodologia.pdf"
+      "r2_key": "fundamentos/fundamentos-metodologia.pdf",
+      "isbn": "978-99989-45-09-8"
     },
     {
       "slug": "fundamentos-02-bioetica",
@@ -222,7 +240,8 @@
       "book_dir": "fundamentos/02-bioetica",
       "dist_relpath": "fundamentos/02-bioetica/dist/fundamentos-bioetica.pdf",
       "attachment_filename": "fundamentos-bioetica.pdf",
-      "r2_key": "fundamentos/fundamentos-bioetica.pdf"
+      "r2_key": "fundamentos/fundamentos-bioetica.pdf",
+      "isbn": "978-99989-45-10-4"
     },
     {
       "slug": "fundamentos-03-redaccion-cientifica",
@@ -233,7 +252,8 @@
       "book_dir": "fundamentos/03-redaccion-cientifica",
       "dist_relpath": "fundamentos/03-redaccion-cientifica/dist/fundamentos-redaccion-cientifica.pdf",
       "attachment_filename": "fundamentos-redaccion-cientifica.pdf",
-      "r2_key": "fundamentos/fundamentos-redaccion-cientifica.pdf"
+      "r2_key": "fundamentos/fundamentos-redaccion-cientifica.pdf",
+      "isbn": "978-99989-45-11-1"
     },
     {
       "slug": "fundamentos-04-inteligencia-artificial",
@@ -244,7 +264,8 @@
       "book_dir": "fundamentos/04-inteligencia-artificial",
       "dist_relpath": "fundamentos/04-inteligencia-artificial/dist/fundamentos-inteligencia-artificial.pdf",
       "attachment_filename": "fundamentos-inteligencia-artificial.pdf",
-      "r2_key": "fundamentos/fundamentos-inteligencia-artificial.pdf"
+      "r2_key": "fundamentos/fundamentos-inteligencia-artificial.pdf",
+      "isbn": "978-99989-45-12-8"
     },
     {
       "slug": "patologia-volumen-1",
@@ -256,7 +277,9 @@
       "dist_relpath": "manual-de-patologia-medica/volumen-1/dist/manual-de-patologia-medica-volumen-1.pdf",
       "attachment_filename": "manual-de-patologia-medica-volumen-1.pdf",
       "note": "~24 MB; cerca del límite de adjunto Gmail (25 MB).",
-      "r2_key": "manual-de-patologia-medica/manual-de-patologia-medica-volumen-1.pdf"
+      "r2_key": "manual-de-patologia-medica/manual-de-patologia-medica-volumen-1.pdf",
+      "isbn": "978-99989-45-07-4",
+      "isbn_note": "ISBN de obra completa del Manual; vols. 1 y 2 comparten número. Preferir match por título."
     },
     {
       "slug": "patologia-volumen-2",
@@ -267,7 +290,9 @@
       "book_dir": "manual-de-patologia-medica/volumen-2",
       "dist_relpath": "manual-de-patologia-medica/volumen-2/dist/manual-de-patologia-medica-volumen-2.pdf",
       "attachment_filename": "manual-de-patologia-medica-volumen-2.pdf",
-      "r2_key": "manual-de-patologia-medica/manual-de-patologia-medica-volumen-2.pdf"
+      "r2_key": "manual-de-patologia-medica/manual-de-patologia-medica-volumen-2.pdf",
+      "isbn": "978-99989-45-07-4",
+      "isbn_note": "ISBN de obra completa del Manual; vols. 1 y 2 comparten número. Preferir match por título."
     },
     {
       "slug": "patologia-casos",
@@ -278,10 +303,22 @@
       "book_dir": "manual-de-patologia-medica/casos",
       "dist_relpath": "manual-de-patologia-medica/casos/dist/manual-de-patologia-medica-casos.pdf",
       "attachment_filename": "manual-de-patologia-medica-casos.pdf",
-      "r2_key": "manual-de-patologia-medica/manual-de-patologia-medica-casos.pdf"
+      "r2_key": "manual-de-patologia-medica/manual-de-patologia-medica-casos.pdf",
+      "isbn_status": "pending",
+      "isbn_note": "ISBN individual pendiente (Biblioteca Nacional); slots candidatos 978-99989-45-08 / -09."
     }
   ],
   "r2_bucket": "chauxlab-ebooks",
   "worker_url": "https://chauxlab-ebooks.alcides-chaux.workers.dev",
-  "delivery_mode": "worker-signed-url"
+  "delivery_mode": "worker-signed-url",
+  "delivery_email": {
+    "provider": "resend",
+    "from": "editorial@chauxlab.com",
+    "from_name": "ChauxLab Editorial",
+    "reply_to": "editorial@chauxlab.com",
+    "bcc": [
+      "alcides.chaux@chauxlab.com"
+    ],
+    "link_ttl_seconds": 604800
+  }
 }
