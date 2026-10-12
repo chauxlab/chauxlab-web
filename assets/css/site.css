@@ -215,29 +215,91 @@ a:hover {
   align-items: end;
   color: var(--white);
   background:
-    radial-gradient(ellipse 80% 60% at 70% 20%, rgba(184, 149, 74, 0.2), transparent 55%),
-    radial-gradient(ellipse 60% 50% at 15% 85%, rgba(26, 58, 92, 0.5), transparent 60%),
+    radial-gradient(ellipse 80% 60% at 70% 20%, rgba(184, 149, 74, 0.14), transparent 55%),
+    radial-gradient(ellipse 60% 50% at 15% 85%, rgba(26, 58, 92, 0.45), transparent 60%),
     linear-gradient(165deg, #07101c 0%, var(--navy) 48%, #152a45 100%);
   overflow: hidden;
 }
+
+/* Fan of individual covers — full-bleed field, stays behind type */
+.hero__covers {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0;
+  animation: heroCoversIn 1.25s ease forwards 0.12s;
+}
+
+.hero__cover {
+  position: absolute;
+  top: 46%;
+  left: 50%;
+  width: auto;
+  height: min(92vh, 96%);
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  border-radius: 0.2rem;
+  opacity: 0.3;
+  filter: saturate(0.82) brightness(0.95);
+  box-shadow: 0 22px 56px rgba(0, 0, 0, 0.24);
+  transform-origin: 50% 90%;
+  transform: translate(-50%, -50%) rotate(var(--rot, 0deg)) translateY(var(--lift, 0rem));
+}
+
+.hero__cover:nth-child(1) { --rot: -38deg; --lift: 3.2rem; margin-left: -52vw; }
+.hero__cover:nth-child(2) { --rot: -28deg; --lift: 1.5rem; margin-left: -39vw; }
+.hero__cover:nth-child(3) { --rot: -18deg; --lift: 0.4rem; margin-left: -26vw; }
+.hero__cover:nth-child(4) { --rot: -8deg;  --lift: -0.25rem; margin-left: -13vw; }
+.hero__cover:nth-child(5) { --rot: 2deg;   --lift: -0.5rem; margin-left: 0; }
+.hero__cover:nth-child(6) { --rot: 12deg;  --lift: -0.2rem; margin-left: 13vw; }
+.hero__cover:nth-child(7) { --rot: 22deg;  --lift: 0.5rem; margin-left: 26vw; }
+.hero__cover:nth-child(8) { --rot: 32deg;  --lift: 1.6rem; margin-left: 39vw; }
+.hero__cover:nth-child(9) { --rot: 42deg;  --lift: 3.3rem; margin-left: 52vw; }
 
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(rgba(255, 255, 255, 0.12) 1px, transparent 1px);
+  z-index: 0;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
   background-size: 26px 26px;
   mask-image: radial-gradient(ellipse 70% 60% at 65% 25%, black, transparent 70%);
   pointer-events: none;
 }
 
+/* Soft veil: covers stay visible across the field; type stays readable */
 .hero::after {
   content: "";
   position: absolute;
-  inset: auto 0 0;
-  height: 45%;
-  background: linear-gradient(to top, rgba(7, 16, 28, 0.65), transparent);
+  inset: 0;
+  z-index: 0;
+  background:
+    linear-gradient(
+      to top,
+      rgba(7, 16, 28, 0.88) 0%,
+      rgba(7, 16, 28, 0.48) 26%,
+      rgba(7, 16, 28, 0.08) 52%,
+      rgba(7, 16, 28, 0.16) 100%
+    ),
+    linear-gradient(
+      100deg,
+      rgba(7, 16, 28, 0.42) 0%,
+      rgba(7, 16, 28, 0.08) 40%,
+      transparent 68%
+    );
   pointer-events: none;
+}
+
+@keyframes heroCoversIn {
+  from {
+    opacity: 0;
+    transform: translateY(0.7rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .hero__inner {
@@ -247,6 +309,45 @@ a:hover {
   margin: 0 auto;
   padding: 7.5rem 1.5rem 4.5rem;
   width: 100%;
+}
+
+@media (max-width: 900px) {
+  .hero__cover {
+    height: min(72vh, 82%);
+    opacity: 0.26;
+    top: 44%;
+  }
+
+  .hero__cover:nth-child(1) { margin-left: -54vw; }
+  .hero__cover:nth-child(2) { margin-left: -40.5vw; }
+  .hero__cover:nth-child(3) { margin-left: -27vw; }
+  .hero__cover:nth-child(4) { margin-left: -13.5vw; }
+  .hero__cover:nth-child(5) { margin-left: 0; }
+  .hero__cover:nth-child(6) { margin-left: 13.5vw; }
+  .hero__cover:nth-child(7) { margin-left: 27vw; }
+  .hero__cover:nth-child(8) { margin-left: 40.5vw; }
+  .hero__cover:nth-child(9) { margin-left: 54vw; }
+}
+
+@media (max-width: 720px) {
+  .hero__cover {
+    height: min(58vh, 70%);
+    opacity: 0.24;
+    top: 40%;
+  }
+
+  .hero__cover:nth-child(1),
+  .hero__cover:nth-child(9) {
+    display: none;
+  }
+
+  .hero__cover:nth-child(2) { margin-left: -48vw; }
+  .hero__cover:nth-child(3) { margin-left: -32vw; }
+  .hero__cover:nth-child(4) { margin-left: -16vw; }
+  .hero__cover:nth-child(5) { margin-left: 0; }
+  .hero__cover:nth-child(6) { margin-left: 16vw; }
+  .hero__cover:nth-child(7) { margin-left: 32vw; }
+  .hero__cover:nth-child(8) { margin-left: 48vw; }
 }
 
 .hero__brand {
@@ -283,6 +384,7 @@ a:hover {
   letter-spacing: -0.015em;
   max-width: 20ch;
   margin: 0 0 1.5rem;
+  text-shadow: 0 1px 18px rgba(7, 16, 28, 0.45);
   opacity: 0;
   animation: rise 0.9s ease forwards 0.35s;
 }
