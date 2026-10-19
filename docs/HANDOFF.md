@@ -60,13 +60,20 @@ Gmail queda para operación humana / fase 1 asistida. Cloudflare Email Sending d
 - Secrets DEV cargados (`PAGOPAR_*_DEV`).
 - **Prueba webhook** (2026-10-12): el botón “Simular pago” del panel **no sirve** (comercio ya en producción). Se envió POST firmado a `/pagopar/respuesta` → HTTP 200, token inválido 401, entrega Resend **TEST-SIM-80a0d116** (revisiones sistemáticas) a `alcides.chaux@chauxlab.com`. Replay idempotente OK.
 
+### Hecho — entrega asistida Mirna Cuevas (2026-10-17)
+
+- Pedidos **#30099439** (*revisión de la literatura*) y **#30099558** (*revisiones sistemáticas*), misma compradora.
+- Entrega **Drive + Resend** (BCC `alcides.chaux@chauxlab.com`); tooling `herramientas/ebook-delivery/` no está en esta Mac → no se usó `deliver.sh` / R2 firmado.
+- Gmail: etiquetas `Estado/ENVIADO` + PAGOPAR/EDITORIAL/CHAUXLAB en ambos threads de venta.
+- Pendiente aparte: factura nominada MIRNA CUEVAS / RUC 2145033-1.
+
 ### Pendiente — retomar aquí (entrega ebooks)
 
-1. **Esperar uPay** (URLs PRODUCCIÓN). Mientras: entrega asistida ante ventas nuevas.
-2. Tras uPay: verificar panel PRODUCCIÓN → pago real de prueba → Actividades recientes + mail automático.
+1. **`ebook-delivery` no está en GitHub org `chauxlab`** (ver `/Users/alcideschaux/chauxlab/REPOS.md`). Recuperar de otra máquina o recrear bajo `herramientas/ebook-delivery/` (`deliver.sh` + `.env` + worker). Libros ahora en `editorial/chauxlab-books`.
+2. Cerrar URLs PRODUCCIÓN con uPay (corregir tracking Gmail si sigue pendiente) → webhook automático.
 3. **ISBN Casos clínicos** cuando BN asigne número.
 4. Dominio opcional `descargas.chauxlab.com` si DNS a Cloudflare.
-5. #29902661: no reenviar por R2 salvo reclamo.
+5. #29902661 / #30099439 / #30099558: no reenviar salvo reclamo.
 
 ### No reabrir sin motivo
 

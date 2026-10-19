@@ -1,0 +1,12 @@
+---
+description: Si falta tooling local (ebook-delivery, books, pagopar), pedir al usuario antes de improvisar
+alwaysApply: true
+---
+
+# Tooling ChauxLab faltante
+
+Para tareas de este sitio (ventas PagoPar, entrega ebooks, mapas, ISBNs):
+
+- Paths canónicos esperados bajo `/Users/alcideschaux/chauxlab/` (ver `../../../../REPOS.md` cuando exista, o el inventario en `docs/HANDOFF.md`).
+- Si falta `ebook-delivery`, `chauxlab-books`, `chauxlab-pagopar` u otra herramienta citada en el handoff: **parar y preguntar** al usuario si la hace disponible o cómo proceder.
+- No inventar un flujo alternativo (p. ej. Drive en lugar de R2 firmado) sin confirmación explícita.
