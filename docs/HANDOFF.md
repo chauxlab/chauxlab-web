@@ -1,5 +1,21 @@
 # Handoff — listo para diseño (sesión siguiente)
 
+## Cierre de sesión — 2026-10-20 — ROR, ISBN editorial y artículo ETAT
+
+### Hecho
+
+- ROR asignado: [https://ror.org/0235cd723](https://ror.org/0235cd723) (*ChauxLab Institute (Paraguay)*; alias *ChauxLab Institute E.A.S.*).
+- Prefijo ISBN editorial `978-99989-45` (Agencia ISBN Paraguay, editor 12724) publicado junto a ISNI y Ringgold en `/quienes-somos/` y JSON-LD.
+- Identidad canónica: `chauxlab-kb` `CL-GOV-001` v2.0.3. Ficha compartible: `chauxlab-db` `institucional/identificadores.md`.
+- Artículo publicado: Chaux A, Britos P. *Liquid Biopsy in Genitourinary Cancers…* Explor Target Antitumor Ther. 2026;7:1002407. DOI [10.37349/etat.2026.1002407](https://doi.org/10.37349/etat.2026.1002407).
+
+### Pendiente
+
+- Ninguno en identificadores persistentes (ROR, ISNI, Ringgold, prefijo ISBN).
+- ISBN individual de *Casos clínicos* (BN).
+
+---
+
 ## Cierre de sesión — 2026-10-10 — entrega ebooks R2
 
 ### Hecho
@@ -92,7 +108,7 @@ Gmail queda para operación humana / fase 1 asistida. Cloudflare Email Sending d
 
 ### Pendiente
 
-- ROR: formulario enviado el 2026-09-22. No publicar hasta que asignen el código.
+- ROR: formulario enviado el 2026-09-22. No publicar hasta que asignen el código. **Resuelto 2026-10-20:** [https://ror.org/0235cd723](https://ror.org/0235cd723).
 
 ---
 
@@ -107,7 +123,7 @@ Gmail queda para operación humana / fase 1 asistida. Cloudflare Email Sending d
 ### Pendiente
 
 1. Opcional: 4º A `185.199.111.153` en `alcideschaux.com` (el cert salió con tres A).
-2. ROR pendiente de asignación (formulario 2026-09-22). Ringgold e ISNI publicados el 2026-09-24.
+2. ROR pendiente de asignación (formulario 2026-09-22). Ringgold e ISNI publicados el 2026-09-24. **Resuelto 2026-10-20:** [https://ror.org/0235cd723](https://ror.org/0235cd723).
 3. Shopify: no reactivar CNAMEs; la tienda puede seguir online hasta fin de suscripción.
 
 ---
@@ -129,7 +145,7 @@ Gmail queda para operación humana / fase 1 asistida. Cloudflare Email Sending d
 ### Pendiente / seguimiento
 
 1. Opcional: 4º A `185.199.111.153` en alcideschaux.
-2. ROR pendiente de asignación. Ringgold e ISNI ya están en el sitio y en este handoff (2026-09-24).
+2. ROR pendiente de asignación. Ringgold e ISNI ya están en el sitio y en este handoff (2026-09-24). **Resuelto 2026-10-20:** [https://ror.org/0235cd723](https://ror.org/0235cd723).
 3. Shopify: plan en cancelación (tienda puede seguir online hasta fin de suscripción); no reactivar CNAMEs.
 
 ### Frontera de marca
