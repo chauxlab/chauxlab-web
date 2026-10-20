@@ -1271,6 +1271,86 @@ a:hover {
   color: var(--gold);
 }
 
+.org-ids {
+  list-style: none;
+  margin: 1.5rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.org-ids + p {
+  margin-top: 1.35rem;
+}
+
+@media (min-width: 40rem) {
+  .org-ids {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.org-id {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  min-height: 44px;
+  padding: 0.7rem 0.85rem;
+  background: var(--white);
+  border: 1px solid var(--mist);
+  color: var(--navy);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+a.org-id:hover {
+  color: var(--navy);
+  border-color: var(--gold-soft);
+}
+
+.org-id--static {
+  margin: 0;
+}
+
+.org-id__logo {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+}
+
+.org-id__mark {
+  flex-shrink: 0;
+  min-width: 2.6rem;
+  padding: 0.2rem 0.35rem;
+  border: 1px solid var(--navy);
+  color: var(--navy);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.org-id__label {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--slate);
+}
+
+.org-id__value {
+  display: block;
+  margin-top: 0.12rem;
+  font-size: 0.88rem;
+  font-variant-numeric: tabular-nums;
+  word-break: break-all;
+}
+
+.resource-copy a.org-id {
+  text-decoration: none;
+}
+
 .guide-links {
   list-style: none;
   margin: 1.5rem 0 0;
@@ -1463,6 +1543,10 @@ a:hover {
   font-size: 0.92rem;
   color: var(--slate);
   max-width: 42rem;
+}
+
+.pub-group + .pub-group__note {
+  margin-top: 2rem;
 }
 
 /* —— Journal logos —— */

@@ -10,25 +10,25 @@
       value: "Nube OJS (M1)",
       label: "M1 · Nube OJS",
       blurb:
-        "Cotización para infraestructura OJS en la nube, con tu equipo editorial a cargo de la revista.",
+        "Consulta sobre infraestructura OJS en la nube, con tu equipo editorial a cargo de la revista.",
       message:
-        "Solicito cotización de la modalidad M1 (Nube OJS).\n\nContexto de la revista / institución:\n",
+        "Consulta sobre la modalidad M1 (Nube OJS).\n\nContexto de la revista / institución:\n",
     },
     m2: {
       value: "Gestión editorial OJS (M2)",
       label: "M2 · Gestión editorial",
       blurb:
-        "Cotización para externalizar la operación editorial sobre una instancia OJS existente.",
+        "Consulta para externalizar la operación editorial sobre una instancia OJS existente.",
       message:
-        "Solicito cotización de la modalidad M2 (Gestión editorial).\n\nURL o datos de la instancia OJS actual:\n",
+        "Consulta sobre la modalidad M2 (Gestión editorial).\n\nURL o datos de la instancia OJS actual:\n",
     },
     m3: {
       value: "Integral (M3)",
       label: "M3 · Integral",
       blurb:
-        "Cotización para instancia OJS + gestión editorial con un solo interlocutor.",
+        "Consulta sobre instancia OJS y gestión editorial con un solo interlocutor.",
       message:
-        "Solicito cotización de la modalidad M3 (Integral).\n\nContexto de la revista / institución:\n",
+        "Consulta sobre la modalidad M3 (Integral).\n\nContexto de la revista / institución:\n",
     },
     investigacion: {
       value: "Investigación institucional",
@@ -55,10 +55,10 @@
     const context = document.getElementById("cotizacion-context");
 
     selectServicio.value = servicioElegido.value;
-    document.getElementById("cotizacion-eyebrow").textContent = "Cotización seleccionada";
+    document.getElementById("cotizacion-eyebrow").textContent = "Tema preseleccionado";
     document.getElementById("cotizacion-title").textContent = servicioElegido.label;
     document.getElementById("cotizacion-lede").textContent =
-      "Completá tus datos. El servicio ya está preseleccionado según la modalidad elegida.";
+      "Completá tus datos. El tema ya está indicado según la página de origen.";
     if (context) {
       context.hidden = false;
       context.textContent = servicioElegido.blurb;
@@ -108,7 +108,7 @@
       email: email,
       replyto: email,
       Institución: institucion || "(sin indicar)",
-      "Servicio de interés": servicio,
+      Tema: servicio,
       message: mensaje || "(sin mensaje)",
     };
 
