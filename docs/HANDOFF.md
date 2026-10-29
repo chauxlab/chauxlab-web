@@ -1,5 +1,22 @@
 # Handoff — listo para diseño (sesión siguiente)
 
+## Cierre de sesión — 2026-10-29 — Plan B entrega ebooks (Gmail → Worker)
+
+### Hecho
+
+- uPay (Bruno Mena): los **links de venta** no pegan las URLs de integración. El webhook `POST /pagopar/respuesta` no cubre `pago.pagopar.com/…`.
+- Pedido **#30331666** (Jaime Olmos, *IA para protocolos de investigación*) pagado 2026-10-25; Worker no fue invocado. Entrega manual Resend 2026-10-29 (`01a175a6-111a-7f1b-9ab4-4dd3063e3623`). No reenviar.
+- Plan B en `herramientas/ebook-delivery/`: `POST /pagopar/from-mail` + parser `worker/src/mail.js` + Apps Script **ChauxLab Pagopar Delivery** (`gmail/PagoparDelivery.gs`, cuenta `alcides.chaux@chauxlab.com`, trigger `processPagoparSales` cada 5 min). Recibos R2 `deliveries/pedido-{n}.json`. Observability Worker activada.
+- Apex MX Gmail intacto. Sin formulario de checkout en chauxlab.com.
+
+### Pendiente
+
+1. ISBN Casos clínicos (BN).
+2. Dominio opcional `descargas.chauxlab.com`.
+3. No reenviar #29902661 / #30099439 / #30099558 / #30331666 salvo reclamo.
+
+---
+
 ## Cierre de sesión — 2026-10-20 — ROR, ISBN editorial y artículo ETAT
 
 ### Hecho
@@ -85,11 +102,10 @@ Gmail queda para operación humana / fase 1 asistida. Cloudflare Email Sending d
 
 ### Pendiente — retomar aquí (entrega ebooks)
 
-1. **`ebook-delivery` no está en GitHub org `chauxlab`** (ver `/Users/alcideschaux/chauxlab/REPOS.md`). Recuperar de otra máquina o recrear bajo `herramientas/ebook-delivery/` (`deliver.sh` + `.env` + worker). Libros ahora en `editorial/chauxlab-books`.
-2. Cerrar URLs PRODUCCIÓN con uPay (corregir tracking Gmail si sigue pendiente) → webhook automático.
-3. **ISBN Casos clínicos** cuando BN asigne número.
-4. Dominio opcional `descargas.chauxlab.com` si DNS a Cloudflare.
-5. #29902661 / #30099439 / #30099558: no reenviar salvo reclamo.
+1. Plan B Apps Script **autorizado** (proyecto `ChauxLab Pagopar Delivery`). Tooling en `herramientas/ebook-delivery/`.
+2. **ISBN Casos clínicos** cuando BN asigne número.
+3. Dominio opcional `descargas.chauxlab.com` si DNS a Cloudflare.
+4. #29902661 / #30099439 / #30099558 / #30331666: no reenviar salvo reclamo. Webhook de links: uPay dijo que no aplica; no insistir.
 
 ### No reabrir sin motivo
 
