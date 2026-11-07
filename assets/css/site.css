@@ -489,6 +489,22 @@ a:hover {
   color: var(--gold-soft);
 }
 
+.btn--outline {
+  background: transparent;
+  color: var(--navy-mid);
+  border-color: rgba(15, 39, 68, 0.28);
+}
+
+.btn--outline:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+  background: rgba(184, 149, 74, 0.08);
+}
+
+.buy-conditions {
+  margin: 0 0 1.75rem;
+}
+
 /* —— Sections —— */
 .section {
   padding: 4.5rem 1.5rem;
