@@ -3,7 +3,8 @@
  */
 (function () {
   const WORKER_URL = "https://chauxlab-ebooks.alcides-chaux.workers.dev/orders/transfer";
-  const LIBROS_URL = "../data/libros.json";
+  // Absolute from site root — this page lives at /libros/comprar/, so ../data would 404.
+  const LIBROS_URL = "/data/libros.json";
 
   const SERIES_LABELS = {
     "IA aplicada": "Serie IA aplicada",
