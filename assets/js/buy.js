@@ -25,6 +25,28 @@
   const submitBtn = document.getElementById("bf-submit");
   const successEl = document.getElementById("bf-success");
   const successPedido = document.getElementById("bf-success-pedido");
+  const checkoutEl = document.getElementById("bf-checkout");
+  const titleEl = document.getElementById("bf-title");
+  const eyebrowEl = document.getElementById("bf-eyebrow");
+
+  function showSuccess(pedido) {
+    if (checkoutEl) checkoutEl.hidden = true;
+    if (form) {
+      form.hidden = true;
+      form.setAttribute("aria-hidden", "true");
+    }
+    if (titleEl) titleEl.textContent = "Pedido enviado";
+    if (eyebrowEl) eyebrowEl.textContent = "Listo";
+    if (successEl) {
+      successEl.hidden = false;
+      if (successPedido) successPedido.textContent = pedido;
+    }
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Enviar pedido";
+    }
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
 
   let books = [];
 
@@ -158,12 +180,7 @@
         throw new Error(map[data.error] || "No se pudo enviar el pedido. Probá de nuevo o escribinos a editorial@chauxlab.com.");
       }
 
-      form.hidden = true;
-      if (successEl) {
-        successEl.hidden = false;
-        if (successPedido) successPedido.textContent = data.pedido;
-      }
-      window.scrollTo({ top: 0, behavior: "smooth" });
+      showSuccess(data.pedido);
     } catch (err) {
       setStatus(err.message || "Error de red", "error");
       if (submitBtn) {

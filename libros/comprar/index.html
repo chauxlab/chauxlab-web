@@ -74,8 +74,19 @@
     <main id="contenido">
       <section class="section">
         <div class="section__inner">
-          <p class="eyebrow">Catálogo editorial</p>
-          <h1 class="section__title">Adquirir ebook</h1>
+          <p class="eyebrow" id="bf-eyebrow">Catálogo editorial</p>
+          <h1 class="section__title" id="bf-title">Adquirir ebook</h1>
+
+          <div id="bf-success" class="buy-success" hidden>
+            <p>
+              Tu número de pedido es <strong id="bf-success-pedido"></strong>.
+              Te enviamos un acuse a tu correo. Cuando confirmemos el depósito en Sudameris,
+              te llega el enlace de descarga del PDF.
+            </p>
+            <p><a href="../">Volver al catálogo</a></p>
+          </div>
+
+          <div id="bf-checkout">
           <p class="section__lede">
             Un título por pedido. Transferí el monto a Sudameris, adjuntá el comprobante y
             enviá el formulario. Cuando confirmemos el depósito, te mandamos el PDF por correo.
@@ -112,16 +123,6 @@
               (o tu correo). Monto exacto según el precio del título elegido abajo.
             </p>
           </aside>
-
-          <div id="bf-success" class="buy-success" hidden>
-            <h2 class="section__title" style="font-size: 1.6rem">Pedido recibido</h2>
-            <p>
-              Tu número de pedido es <strong id="bf-success-pedido"></strong>.
-              Te enviamos un acuse a tu correo. Cuando veamos el depósito en Sudameris,
-              te llega el enlace de descarga del PDF.
-            </p>
-            <p><a href="../">Volver al catálogo</a></p>
-          </div>
 
           <form class="form form--buy" id="buy-form">
             <div class="form-row form-row--honeypot" aria-hidden="true">
@@ -188,6 +189,7 @@
             </button>
             <p class="form__status" id="bf-status" hidden></p>
           </form>
+          </div>
         </div>
       </section>
     </main>
@@ -229,6 +231,6 @@
     </footer>
 
     <script src="../../assets/js/nav.js"></script>
-    <script src="../../assets/js/buy.js?v=20261107"></script>
+    <script src="../../assets/js/buy.js?v=20261107b"></script>
   </body>
 </html>

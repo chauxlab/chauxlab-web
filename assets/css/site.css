@@ -1328,6 +1328,14 @@ a:hover {
   background: rgba(47, 107, 79, 0.08);
 }
 
+/* CSS display on .form overrides the HTML hidden attribute otherwise */
+#bf-checkout[hidden],
+#bf-success[hidden],
+.form[hidden],
+.form--buy[hidden] {
+  display: none !important;
+}
+
 @media (max-width: 560px) {
   .bank-box__grid,
   .form-row--split {
