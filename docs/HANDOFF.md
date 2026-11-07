@@ -19,10 +19,9 @@
 
 ### Pendiente
 
-1. **Bloqueante ventas:** desplegar Worker con `transfer:true` (sitio ya en `main` / `/libros/comprar/` publicado). En esta Mac: `cd ~/chauxlab/herramientas/ebook-delivery/worker && npx wrangler login && npx wrangler deploy` (o `./deploy-now.sh`).
-2. ISBN Casos clínicos (BN) — sigue pendiente (no relacionado).
-3. **Diferido a propósito:** migración DNS DreamHost → Cloudflare y `descargas.chauxlab.com`. Prioridad = cobrar ya; enlaces firmados siguen en `*.workers.dev`.
-4. Medio plazo: Bancard / otra pasarela cuando estabilice el sistema.
+1. ISBN Casos clínicos (BN) — sigue pendiente (no relacionado).
+2. **Diferido:** migración DNS DreamHost → Cloudflare y `descargas.chauxlab.com`; enlaces firmados siguen en `*.workers.dev`.
+3. **Producto:** la transferencia local (sin comisiones de pasarela) puede quedar como canal permanente para compras en Paraguay; eventual cuenta Sudameris a nombre de la empresa. Pasarela alternativa solo si hace falta para pagos internacionales.
 
 ---
 
