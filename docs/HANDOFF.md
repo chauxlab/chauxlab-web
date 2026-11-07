@@ -14,14 +14,21 @@
 - Formulario `/libros/comprar/`: nombre, apellido, email, libro (1 por pedido), factura opcional (CI/RUC), adjunto comprobante.
 - Cuenta publicada: **Sudameris Bank · Alcides Chaux · CI 1526782 · CTA 4670949**.
 - Worker `POST /orders/transfer`: guarda pedido + comprobante en R2 `orders/pending/{pedido}/`, mail a editorial (con link firmado al comprobante + hint `deliver.sh`) y acuse al comprador. **Sin auto-entrega.**
-- Catálogo apunta a `/libros/comprar/?libro=slug` (ya no a PagoPar). Legal `/legal/ebooks/` actualizado.
+- Catálogo apunta a `/libros/comprar/?libro=slug`. Legal `/legal/ebooks/` y copy del sitio sin menciones públicas a Ueno/PagoPar/uPay.
 - Ops: verificar depósito → `./deliver.sh <slug> <email> <TRANS-…>` desde `herramientas/ebook-delivery/`.
+- UI post-envío: solo “Pedido enviado” + número; se oculta banco/form. Condiciones debajo de Enviar pedido.
+
+### Aprobado — canal de venta de libros (2026-11-07)
+
+**Metodología vigente** hasta nuevo ajuste: compra por **transferencia bancaria** vía `/libros/comprar/` → revisión humana del depósito → entrega con `deliver.sh` / Resend + R2 firmado.
+
+Diseño y flujo verificados en producción (formulario, mails editorial + comprador, Worker `transfer:true`). Es el canal del sitio para vender ebooks; no depender de PagoPar/uPay. Posibles mejoras futuras (cuenta a nombre de la empresa, `descargas.chauxlab.com`, pasarela internacional) **no** bloquean este canal.
 
 ### Pendiente
 
 1. ISBN Casos clínicos (BN) — sigue pendiente (no relacionado).
 2. **Diferido:** migración DNS DreamHost → Cloudflare y `descargas.chauxlab.com`; enlaces firmados siguen en `*.workers.dev`.
-3. **Producto:** la transferencia local (sin comisiones de pasarela) puede quedar como canal permanente para compras en Paraguay; eventual cuenta Sudameris a nombre de la empresa. Pasarela alternativa solo si hace falta para pagos internacionales.
+3. Opcional más adelante: cuenta Sudameris a nombre de la empresa; pasarela solo si hace falta para pagos internacionales.
 
 ---
 
