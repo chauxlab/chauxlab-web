@@ -19,9 +19,9 @@
 
 ### Pendiente
 
-1. **Prioridad:** desplegar Worker (`transfer:true`) + push sitio para que `/libros/comprar/` esté en vivo.
+1. **Bloqueante ventas:** desplegar Worker con `transfer:true` (sitio ya en `main` / `/libros/comprar/` publicado). En esta Mac: `cd ~/chauxlab/herramientas/ebook-delivery/worker && npx wrangler login && npx wrangler deploy` (o `./deploy-now.sh`).
 2. ISBN Casos clínicos (BN) — sigue pendiente (no relacionado).
-3. **Diferido (no bloquea ventas):** migración DNS DreamHost → Cloudflare y Custom Domain `descargas.chauxlab.com`. Seguir con `*.workers.dev` en enlaces firmados.
+3. **Diferido a propósito:** migración DNS DreamHost → Cloudflare y `descargas.chauxlab.com`. Prioridad = cobrar ya; enlaces firmados siguen en `*.workers.dev`.
 4. Medio plazo: Bancard / otra pasarela cuando estabilice el sistema.
 
 ---
