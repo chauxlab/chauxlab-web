@@ -584,6 +584,14 @@ a:hover {
   color: rgba(255, 255, 255, 0.82);
 }
 
+.page-hero a {
+  color: var(--gold-soft);
+}
+
+.page-hero a:hover {
+  color: var(--gold);
+}
+
 /* —— Offer cards —— */
 .offer-list {
   display: grid;
