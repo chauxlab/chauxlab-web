@@ -55,9 +55,19 @@
 
   async function loadBooks() {
     const res = await fetch(LIBROS_URL, { cache: "no-cache" });
-    if (!res.ok) throw new Error("No se pudo cargar el catálogo");
-    const data = await res.json();
+    if (!res.ok) {
+      throw new Error(`No se pudo cargar el catálogo (HTTP ${res.status})`);
+    }
+    let data;
+    try {
+      data = await res.json();
+    } catch {
+      throw new Error("No se pudo leer el catálogo");
+    }
     books = (Array.isArray(data) ? data : []).filter((b) => b.available !== false);
+    if (!books.length) {
+      throw new Error("El catálogo está vacío");
+    }
 
     const groups = new Map();
     books.forEach((book) => {
