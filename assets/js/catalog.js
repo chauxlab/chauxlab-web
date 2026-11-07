@@ -16,9 +16,11 @@ function bookCardHtml(book, base) {
     <h3 class="book-card__title">${book.title}</h3>
     ${author}`;
 
-  if (book.available && book.url_pagopar) {
+  // Puente transferencia (PagoPar/uPay caído desde intervención Ueno 2026-11-03)
+  if (book.available) {
+    const href = `${base}libros/comprar/?libro=${encodeURIComponent(book.slug)}`;
     return `<li class="book-card">
-      <a class="book-card__link" href="${book.url_pagopar}" rel="noopener noreferrer" target="_blank">
+      <a class="book-card__link" href="${href}">
         ${inner}
       </a>
     </li>`;

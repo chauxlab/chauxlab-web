@@ -14,10 +14,10 @@ Handoff para la siguiente sesión (diseño): [`docs/HANDOFF.md`](docs/HANDOFF.md
 Mostrar con claridad:
 
 1. **Servicios OJS** (M1 Nube · M2 Gestión · M3 Integral) — precio base publicado en guaraníes; alcance final se ajusta en conversación.
-2. **Catálogo editorial** — compra vía enlace a PagoPar (`data/libros.json`).
+2. **Catálogo editorial** — compra por transferencia (`/libros/comprar/`; `data/libros.json`). PagoPar/uPay suspendido desde la intervención de Ueno Bank (2026-11-03).
 3. Publicaciones, investigación (proyectos de envergadura) y contacto.
 
-No incluye carrito ni Shopify. La integración profunda con la API de PagoPar es fase posterior.
+No incluye carrito ni Shopify.
 
 ## Stack
 

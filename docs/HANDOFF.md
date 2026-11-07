@@ -1,5 +1,31 @@
 # Handoff — listo para diseño (sesión siguiente)
 
+## Incidente — 2026-11-07 — PagoPar caído (intervención Ueno Bank)
+
+### Hecho / contexto (registrado 2026-11-07)
+
+- **Martes 3 de noviembre de 2026:** el BCP intervino **Ueno Bank** (grupo Ueno; a veces oído como “Bueno Banca”) por insolvencia / índice de solvencia bajo el mínimo. Servicios bancarios de la entidad suspendidos; proceso de resolución. Fuentes: [AP](https://apnews.com/article/paraguay-ueno-banco-economia-banco-central-06dd0d6855d37dc4e45eca4517075886), [BBC](https://www.bbc.com/mundo/articles/ckx2qj89lggxo), [France24](https://www.france24.com/es/minuto-a-minuto/20261104-paraguay-interviene-un-banco-vinculado-al-mandatario-pe%C3%B1a-y-renuncia-el-jefe-del-banco-central).
+- **Efecto ChauxLab:** la cuenta de comercio **PagoPar** quedó bloqueada porque estaba asociada a una cuenta en Ueno. Los links `pago.pagopar.com/…` no procesan pagos. Varios clientes reportaron que no pueden pagar.
+- **Incertidumbre:** no se sabe cuánto tiempo PagoPar seguirá caído ni si la plataforma volverá a existir en la forma actual.
+- Devoluciones de depósitos Ueno vía Fondo de Garantía en curso (noticias 2026-11-06/07); eso no restaura PagoPar por sí solo.
+
+### Hecho — puente transferencia (2026-11-07)
+
+- Formulario `/libros/comprar/`: nombre, apellido, email, libro (1 por pedido), factura opcional (CI/RUC), adjunto comprobante.
+- Cuenta publicada: **Sudameris Bank · Alcides Chaux · CI 1526782 · CTA 4670949**.
+- Worker `POST /orders/transfer`: guarda pedido + comprobante en R2 `orders/pending/{pedido}/`, mail a editorial (con link firmado al comprobante + hint `deliver.sh`) y acuse al comprador. **Sin auto-entrega.**
+- Catálogo apunta a `/libros/comprar/?libro=slug` (ya no a PagoPar). Legal `/legal/ebooks/` actualizado.
+- Ops: verificar depósito → `./deliver.sh <slug> <email> <TRANS-…>` desde `herramientas/ebook-delivery/`.
+
+### Pendiente
+
+1. **Prioridad:** desplegar Worker (`transfer:true`) + push sitio para que `/libros/comprar/` esté en vivo.
+2. ISBN Casos clínicos (BN) — sigue pendiente (no relacionado).
+3. **Diferido (no bloquea ventas):** migración DNS DreamHost → Cloudflare y Custom Domain `descargas.chauxlab.com`. Seguir con `*.workers.dev` en enlaces firmados.
+4. Medio plazo: Bancard / otra pasarela cuando estabilice el sistema.
+
+---
+
 ## Cierre de sesión — 2026-10-29 — Plan B entrega ebooks (Gmail → Worker)
 
 ### Hecho
