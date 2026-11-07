@@ -502,7 +502,8 @@ a:hover {
 }
 
 .buy-conditions {
-  margin: 0 0 1.75rem;
+  margin: 0.35rem 0 0;
+  justify-self: start;
 }
 
 /* —— Sections —— */
