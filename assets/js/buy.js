@@ -18,9 +18,6 @@
 
   const select = document.getElementById("bf-libro");
   const priceEl = document.getElementById("bf-precio");
-  const facturaCheck = document.getElementById("bf-factura");
-  const facturaFields = document.getElementById("bf-factura-fields");
-  const documento = document.getElementById("bf-documento");
   const statusEl = document.getElementById("bf-status");
   const submitBtn = document.getElementById("bf-submit");
   const successEl = document.getElementById("bf-success");
@@ -62,17 +59,6 @@
     if (priceEl) {
       priceEl.textContent = book?.price || "—";
     }
-  }
-
-  function toggleFactura() {
-    const on = Boolean(facturaCheck?.checked);
-    if (facturaFields) facturaFields.hidden = !on;
-    if (documento) {
-      documento.required = on;
-      if (!on) documento.value = "";
-    }
-    const razon = document.getElementById("bf-razon");
-    if (razon && !on) razon.value = "";
   }
 
   async function loadBooks() {
@@ -125,8 +111,6 @@
   }
 
   select.addEventListener("change", updatePrice);
-  facturaCheck?.addEventListener("change", toggleFactura);
-  toggleFactura();
 
   loadBooks().catch((err) => {
     setStatus(err.message || "Error al cargar el catálogo", "error");
@@ -140,6 +124,12 @@
 
     if (!select.value) {
       setStatus("Elegí el libro que querés adquirir.", "error");
+      return;
+    }
+
+    const documento = String(document.getElementById("bf-documento")?.value || "").trim();
+    if (!documento) {
+      setStatus("Indicá tu número de cédula.", "error");
       return;
     }
 
@@ -161,7 +151,7 @@
 
     const body = new FormData(form);
     body.set("slug", select.value);
-    body.set("factura", facturaCheck?.checked ? "1" : "0");
+    body.set("documento", documento);
 
     try {
       const res = await fetch(WORKER_URL, { method: "POST", body });
@@ -171,7 +161,7 @@
           missing_name: "Completá nombre y apellido.",
           invalid_email: "Revisá el correo electrónico.",
           missing_slug: "Elegí un libro.",
-          missing_documento: "Indicá CI o RUC para la factura.",
+          missing_documento: "Indicá tu número de cédula.",
           missing_comprobante: "Adjuntá el comprobante.",
           comprobante_too_large: "El comprobante supera 8 MB.",
           comprobante_type: "El comprobante debe ser PDF, JPG, PNG o WebP.",

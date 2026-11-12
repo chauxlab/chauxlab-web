@@ -11,11 +11,11 @@
 
 ### Hecho — puente transferencia (2026-11-07)
 
-- Formulario `/libros/comprar/`: nombre, apellido, email, libro (1 por pedido), factura opcional (CI/RUC), adjunto comprobante.
+- Formulario `/libros/comprar/`: nombre, apellido, email, CI (obligatoria), libro (1 por pedido), adjunto comprobante. Sin opción «necesito factura»: ChauxLab emite y registra el ingreso con los datos del pedido.
 - Cuenta publicada: **Sudameris Bank · Alcides Chaux · CI 1526782 · CTA 4670949**.
 - Worker `POST /orders/transfer`: guarda pedido + comprobante en R2 `orders/pending/{pedido}/`, mail a editorial (con link firmado al comprobante + hint `deliver.sh`) y acuse al comprador. **Sin auto-entrega.**
 - Catálogo apunta a `/libros/comprar/?libro=slug`. Legal `/legal/ebooks/` y copy del sitio sin menciones públicas a Ueno/PagoPar/uPay.
-- Ops: verificar depósito → `./deliver.sh <slug> <email> <TRANS-…>` desde `herramientas/ebook-delivery/`.
+- Ops: verificar depósito → `./deliver.sh <slug> <email> <CLI-…>` desde `herramientas/ebook-delivery/`. Prefijo de pedido: `CLI-` (ChauxLab Institute); pedidos previos `TRANS-` siguen válidos.
 - UI post-envío: solo “Pedido enviado” + número; se oculta banco/form. Condiciones debajo de Enviar pedido.
 
 ### Aprobado — canal de venta de libros (2026-11-07)
