@@ -104,12 +104,12 @@
       access_key: ACCESS_KEY,
       subject: "Consulta ChauxLab — " + servicio,
       from_name: "chauxlab.com",
-      name: nombre,
+      Nombre: nombre,
       email: email,
       replyto: email,
       Institución: institucion || "(sin indicar)",
       Tema: servicio,
-      message: mensaje || "(sin mensaje)",
+      Mensaje: mensaje || "(sin mensaje)",
     };
 
     const originalLabel = submitBtn ? submitBtn.textContent : "";
