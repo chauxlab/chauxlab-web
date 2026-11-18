@@ -1,13 +1,24 @@
-# Handoff — listo para diseño (sesión siguiente)
+# Handoff — sesión siguiente: explorar Bancard (vPOS / tPago)
 
-## Precedente — 2026-11-17 — venta internacional sin pasarela (Julio Castro, Ecuador)
+## Precedente — 2026-11-17/18 — venta internacional sin pasarela
 
-### Caso
+### Retomar aquí (sesión siguiente)
+
+1. **Explorar Bancard** como reemplazo/contingencia post-PagoPar: vPOS (destino sitio) y/o tPago (links). Resolver las tres preguntas abiertas abajo antes de comprometer a compradores exteriores.
+2. Si Bancard habilita internacionales: reabrir Julio (pack Gs. 450.000) y Jaime (títulos a definir); diseñar reenganche catálogo → pago → entrega.
+
+### Caso 1 — Julio Castro (Ecuador) — 2026-11-17
 
 - Consulta vía formulario `/contacto/` (Web3Forms): **Julio Castro**, SOCIAL GAME, Ecuador (`juliocastro_1984@hotmail.com`, tel. 0999270657). Pidió adquirir los “libros de prompts” en **colección completa** → Serie IA aplicada (12 títulos).
-- Respuesta 1: transparencia — material listo, **sin pasarela de cobro internacional** operativa; avisar cuando haya canal.
+- Respuesta 1 (enviada): transparencia — material listo, **sin pasarela de cobro internacional** operativa; avisar cuando haya canal.
 - Respuesta 2 (Julio): pide precios unitario/pack y medios de pago (o previstos); complemento: ¿PayPal?
-- Borrador de respuesta 2 (Gmail, hilo `Consulta ChauxLab — Catálogo editorial`): cotización + política PayPal + evaluación Bancard. BCC Paola.
+- Respuesta 2 (enviada 2026-11-18): cotización pack/unitario + USD referencial + PayPal no + Bancard en evaluación. BCC Paola. Hilo Gmail `Consulta ChauxLab — Catálogo editorial`.
+
+### Caso 2 — Jaime Olmos (México) — 2026-11-18
+
+- Mail directo a `editorial@chauxlab.com`: **JAIME OLMOS DE LA CRUZ** (`jaime.olmos5479@alumnos.udg.mx`, UdG). Asunto: *Adquirir ebook desde México como transferencia*. Pregunta cómo comprar ebooks desde México y si hay transferencia.
+- **Comprador recurrente:** pedido PagoPar **#30331666** (*IA para protocolos de investigación*, 2026-10-25; entrega manual Resend 2026-10-29). No reenviar ese pedido salvo reclamo.
+- Respuesta (enviada 2026-11-18): misma política de contingencia — transferencia local no sirve desde México; sin pasarela internacional; PayPal no; Bancard en evaluación; aviso cuando haya canal; link a `/libros/`. BCC Paola. Hilo `Adquirir ebook desde México como transferencia`.
 
 ### Precedente de política (aprobado en esta sesión)
 
@@ -32,15 +43,15 @@
 
 **Preguntas abiertas a Bancard (antes de comprometer a un comprador exterior):**
 
-1. ¿vPOS / tPago procesan Visa/MC **emitidas en el exterior** (p. ej. Ecuador) para ecommerce de ebooks, cobro en Gs.?
+1. ¿vPOS / tPago procesan Visa/MC **emitidas en el exterior** (p. ej. Ecuador, México) para ecommerce de ebooks, cobro en Gs.?
 2. ¿ChauxLab Institute **E.A.S.** entra en el onboarding (docs listan unipersonal / S.A. / S.R.L.) y con qué papeles?
 3. Comisión exacta por escrito; ¿3D Secure incluido o extra?; cuenta de acreditación (ideal a nombre de la empresa).
 
 ### Pendiente (esta contingencia)
 
-1. Consulta formal a Bancard (vPOS ± tPago) con las tres preguntas de arriba.
-2. Responder a Julio con la cotización/política del precedente (borrador en Gmail) cuando se envíe.
-3. Si Bancard habilita internacionales: reabrir el caso Julio (pack Gs. 450.000) + diseñar reenganche del catálogo a vPOS (webhook → entrega, paralelo al flujo transferencia).
+1. **Sesión siguiente:** consulta / exploración formal Bancard (vPOS ± tPago) con las tres preguntas de arriba.
+2. ~~Responder a Julio~~ — enviado 2026-11-18. ~~Responder a Jaime~~ — enviado 2026-11-18.
+3. Si Bancard habilita internacionales: reabrir Julio (pack Gs. 450.000) + Jaime (títulos a confirmar) + diseñar reenganche del catálogo a vPOS (webhook → entrega, paralelo al flujo transferencia).
 4. Cuenta bancaria a nombre de la empresa (ya diferido en 2026-11-07) sigue siendo deseable para adhesión comercio.
 
 ---
