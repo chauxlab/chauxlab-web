@@ -1,5 +1,50 @@
 # Handoff — listo para diseño (sesión siguiente)
 
+## Precedente — 2026-11-17 — venta internacional sin pasarela (Julio Castro, Ecuador)
+
+### Caso
+
+- Consulta vía formulario `/contacto/` (Web3Forms): **Julio Castro**, SOCIAL GAME, Ecuador (`juliocastro_1984@hotmail.com`, tel. 0999270657). Pidió adquirir los “libros de prompts” en **colección completa** → Serie IA aplicada (12 títulos).
+- Respuesta 1: transparencia — material listo, **sin pasarela de cobro internacional** operativa; avisar cuando haya canal.
+- Respuesta 2 (Julio): pide precios unitario/pack y medios de pago (o previstos); complemento: ¿PayPal?
+- Borrador de respuesta 2 (Gmail, hilo `Consulta ChauxLab — Catálogo editorial`): cotización + política PayPal + evaluación Bancard. BCC Paola.
+
+### Precedente de política (aprobado en esta sesión)
+
+1. **Cotizar ≠ cobrar.** Se puede cotizar pack/unitario aunque el cobro internacional aún no esté habilitado. El precio no implica disponibilidad inmediata de pasarela.
+2. **Pack Serie IA aplicada:** unitario **Gs. 45.000**; pack completo (12 PDF) **Gs. 450.000** (~17% off vs. suma lista Gs. 540.000). Entrega digital en un solo pedido cuando el pago esté confirmado.
+3. **USD solo referencial** (aprox. USD 7 / título, USD 72 pack al TC del momento). **Cobros en guaraníes.** Al concretar prevalece el importe en Gs. vigente; el estimado en dólares puede variar.
+4. **PayPal: no.** En Paraguay no está habilitado para recibir como comercio (decisión del proveedor, no de ChauxLab). No presentarlo como “en evaluación”; no se espera cambio a corto plazo.
+5. **Comunicación:** transparencia temporal + compromiso de avisar al interesado cuando exista un canal verificado usable desde el exterior. No prometer fecha ni método concreto hasta probarlo.
+
+### Contingencia — ideas y planes (cobro post-PagoPar)
+
+**Canal vigente (local):** transferencia Sudameris vía `/libros/comprar/` (ver sección 2026-11-07). No cubre bien compradores en el exterior.
+
+| Opción | Rol | Costo fijo (orient.) | Notas |
+|--------|-----|----------------------|--------|
+| **Bancard vPOS** ([bancard.com.py/vpos](https://www.bancard.com.py/vpos)) | Destino estructural: reemplazo de PagoPar en el sitio (iframe/botón), catálogo → pago → entrega | ~Gs. 74.900/mes | Declara tarjetas internacionales; 3D Secure opcional (ebooks/contracargos); comisión orient. 3% crédito / 2% débito. Requiere adhesión + integración. |
+| **Bancard tPago** ([bancard.com.py/tpago](https://www.bancard.com.py/tpago)) | Puente rápido: links de pago por mail/WhatsApp sin integrar web | ~Gs. 22.900/mes | Más ágil para un pedido asistido (p. ej. Julio). Montos en Gs. Confirmar si acepta tarjetas emitidas en el exterior. |
+| PayPal | Descartado | — | No recepción comercio en Paraguay. |
+| PagoPar / uPay | Suspendido / incierto | — | Cuenta ligada a Ueno; destino de la plataforma incierto. No depender. |
+
+**Lectura operativa:** evaluar **vPOS como destino** (sitio + internacionales); **tPago como contingencia** si hace falta cobrar antes de integrar. Pedir a Bancard ambos en la misma adhesión si aplica.
+
+**Preguntas abiertas a Bancard (antes de comprometer a un comprador exterior):**
+
+1. ¿vPOS / tPago procesan Visa/MC **emitidas en el exterior** (p. ej. Ecuador) para ecommerce de ebooks, cobro en Gs.?
+2. ¿ChauxLab Institute **E.A.S.** entra en el onboarding (docs listan unipersonal / S.A. / S.R.L.) y con qué papeles?
+3. Comisión exacta por escrito; ¿3D Secure incluido o extra?; cuenta de acreditación (ideal a nombre de la empresa).
+
+### Pendiente (esta contingencia)
+
+1. Consulta formal a Bancard (vPOS ± tPago) con las tres preguntas de arriba.
+2. Responder a Julio con la cotización/política del precedente (borrador en Gmail) cuando se envíe.
+3. Si Bancard habilita internacionales: reabrir el caso Julio (pack Gs. 450.000) + diseñar reenganche del catálogo a vPOS (webhook → entrega, paralelo al flujo transferencia).
+4. Cuenta bancaria a nombre de la empresa (ya diferido en 2026-11-07) sigue siendo deseable para adhesión comercio.
+
+---
+
 ## Incidente — 2026-11-07 — PagoPar caído (intervención Ueno Bank)
 
 ### Hecho / contexto (registrado 2026-11-07)
@@ -28,7 +73,7 @@ Diseño y flujo verificados en producción (formulario, mails editorial + compra
 
 1. ISBN Casos clínicos (BN) — sigue pendiente (no relacionado).
 2. **Diferido:** migración DNS DreamHost → Cloudflare y `descargas.chauxlab.com`; enlaces firmados siguen en `*.workers.dev`.
-3. Opcional más adelante: cuenta Sudameris a nombre de la empresa; pasarela solo si hace falta para pagos internacionales.
+3. Cuenta Sudameris a nombre de la empresa — sigue deseable. **Pasarela internacional / reemplazo PagoPar:** ver precedente y contingencia Bancard (vPOS / tPago) del **2026-11-17** (arriba).
 
 ---
 
