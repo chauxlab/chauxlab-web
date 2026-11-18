@@ -1,5 +1,15 @@
 # Handoff — sesión siguiente: explorar Bancard (vPOS / tPago)
 
+## Venta — 2026-11-18 — CLI-20261118-3B7CDD (transferencia)
+
+- **Compradora:** Natalia Alejandra Avalos · CI 4628877-5 · `nataliarobertti89@gmail.com` (misma compradora de `CLI-20261116-86717C`, *IA para protocolos*).
+- **Libro:** *Fundamentos de metodología de la investigación* (`fundamentos-01-metodologia`) · Gs. 75.000.
+- **Canal:** `/libros/comprar/` → depósito Sudameris confirmado.
+- **Entrega:** `./deliver.sh` 2026-11-18 · Resend `01a1ef42-4bf9-7129-baca-879b0df48958` · link R2 TTL 7d (vence ~2026-11-25).
+- **Factura:** emitida 2026-11-18 (e-Kuatia / SIFEN). Cierre OK.
+
+---
+
 ## Precedente — 2026-11-17/18 — venta internacional sin pasarela
 
 ### Retomar aquí (sesión siguiente)
